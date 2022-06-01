@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="711FACBA-6D49-9D4D-55F4-FEE9DB12C1E3" name="DIRECCION">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 01:21:22 UTC</createdTime>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_direccion" id="7DC6E210-58A0-7A26-02A7-4DCE75B85FA0">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 01:21:36 UTC</createdTime>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="calle" id="C9EFF376-9BAE-D3EB-F29A-A8D975F71E15">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 01:22:16 UTC</createdTime>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numeracion" id="E6D92633-49C8-CE53-E595-2A6967EEF638">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 01:23:03 UTC</createdTime>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resto_direccion" id="FD1FCBF1-5791-A149-2B77-3694B4F7DC2B">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 01:24:33 UTC</createdTime>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_comuna" id="763A6C15-899A-7ACB-602E-40730836689B">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:08:27 UTC</createdTime>
+<generatorID>36DC2757-C295-62EA-DFF3-67244285D476</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<referedAttribute>A3A5BEB9-EDD1-76D5-83D3-7276B06B6863</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_ciudad" id="9FED43D7-1184-3A24-2189-2A8462C54EA9">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:09:32 UTC</createdTime>
+<generatorID>36DC2757-C295-62EA-DFF3-67244285D476</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<referedAttribute>0F27A318-A303-951D-236F-C7F0FD97B509</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_region" id="9BF2AEC1-DAFB-620D-CBF8-626AE6C6FAE2">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:09:32 UTC</createdTime>
+<generatorID>36DC2757-C295-62EA-DFF3-67244285D476</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<referedAttribute>26011B86-6987-419A-08D3-C6BA33A088FB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5C2135C6-819D-E77C-55BC-B769CF848373" name="DIRECCION PK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 01:22:13 UTC</createdTime>
+<ownerDesignName>trabajo</ownerDesignName>
+<engineerTo>
+<item key="F2445405-FAAB-6DC3-168A-6B6E03630562" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7DC6E210-58A0-7A26-02A7-4DCE75B85FA0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

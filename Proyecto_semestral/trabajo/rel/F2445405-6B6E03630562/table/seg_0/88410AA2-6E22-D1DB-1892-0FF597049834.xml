@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="88410AA2-6E22-D1DB-1892-0FF597049834" name="CIUDAD">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>A82439A5-3B39-06BF-C381-D980561E92CA</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_ciudad" id="0B144C31-C13D-43C5-3FAA-330D66835BDF">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>B0A5C093-ACC0-6B63-88DB-C54A137FCB92</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_ciudad" id="08C6AC65-C1B6-C167-786D-27A3EF99C140">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>2EFEFA2A-2A3C-F4CE-865A-397E0D5415CC</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGION_id_region" id="51FD71FA-A34A-D889-525A-BA0C3FF8719E">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>1F0FC443-AE60-0FF6-D73A-CB2F32DEC4BD</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3AED166C-21FE-3615-3FFA-BED37390435E" referredColumn="30D1D3C6-84A0-EC3D-E4B7-3BF1569DC866"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="54CD290E-DC32-F5F9-10A2-6AF7B94F8F8D" name="CIUDAD_PK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>8F255521-FB6F-B835-6428-5560041EB365</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B144C31-C13D-43C5-3FAA-330D66835BDF"/>
+<colUsage columnID="51FD71FA-A34A-D889-525A-BA0C3FF8719E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5A9E665A-0326-1C83-E757-1A1D1068E5F9" name="CIUDAD__IDX">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<ownerDesignName>trabajo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>615EC888-E986-7DB0-3188-607EB234C1CA</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="51FD71FA-A34A-D889-525A-BA0C3FF8719E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80643A62-8E66-0495-EAFA-D3B568807C20" name="CIUDAD_REGION_FK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>615EC888-E986-7DB0-3188-607EB234C1CA</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51FD71FA-A34A-D889-525A-BA0C3FF8719E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

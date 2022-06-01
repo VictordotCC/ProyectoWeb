@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="782DA694-0155-5D71-45AF-42F7C44D276A" name="DIRECCION">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>711FACBA-6D49-9D4D-55F4-FEE9DB12C1E3</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_direccion" id="EEAD7AE1-B2A8-8CAE-55FB-1BC01326B592">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>7DC6E210-58A0-7A26-02A7-4DCE75B85FA0</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="calle" id="EF9F8977-D0AA-D6B3-0568-801BDB597259">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>C9EFF376-9BAE-D3EB-F29A-A8D975F71E15</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numeracion" id="E9BD1250-23D0-25B8-44AC-345A4A296155">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>E6D92633-49C8-CE53-E595-2A6967EEF638</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="resto_direccion" id="9EA1670D-D61E-89AD-698D-C02DB01CEA08">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>FD1FCBF1-5791-A149-2B77-3694B4F7DC2B</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMUNA_id_comuna" id="BB7BE9E1-FD6A-9DC4-49E6-A9BAC29730AF">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>763A6C15-899A-7ACB-602E-40730836689B</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F8E9DCB-CE75-9F1E-6D9C-855218EBB0F2" referredColumn="FA39B211-A0E6-DD19-CC94-8413F4D736BB"/>
+</associations>
+</Column>
+<Column name="COMUNA_CIUDAD_id_ciudad" id="F409CB90-C1D0-58F0-D56B-F8F1B421CAFB">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>9FED43D7-1184-3A24-2189-2A8462C54EA9</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F8E9DCB-CE75-9F1E-6D9C-855218EBB0F2" referredColumn="ECFF9FA6-47FC-7C22-B4A0-4F27F9CE4ED5"/>
+</associations>
+</Column>
+<Column name="COMUNA_CIUDAD_REGION_id_region" id="2EB4FA8F-7211-F7DF-7E2F-234FE182C9F1">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>9BF2AEC1-DAFB-620D-CBF8-626AE6C6FAE2</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F8E9DCB-CE75-9F1E-6D9C-855218EBB0F2" referredColumn="7522FD5E-8397-F4EA-C7B3-0F37EF056874"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="81D64F5F-FA8C-EAF2-0868-BFF8F26C2A89" name="DIRECCION_PK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>5C2135C6-819D-E77C-55BC-B769CF848373</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEAD7AE1-B2A8-8CAE-55FB-1BC01326B592"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89DB95C6-4E59-1C92-70FE-228A1C0345BB" name="DIRECCION__IDX">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<ownerDesignName>trabajo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>36DC2757-C295-62EA-DFF3-67244285D476</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="BB7BE9E1-FD6A-9DC4-49E6-A9BAC29730AF"/>
+<colUsage columnID="F409CB90-C1D0-58F0-D56B-F8F1B421CAFB"/>
+<colUsage columnID="2EB4FA8F-7211-F7DF-7E2F-234FE182C9F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F2A28DC-A00C-8C48-F775-BF3C32374EB7" name="DIRECCION_COMUNA_FK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2022-05-28 02:14:03 UTC</createdTime>
+<generatorID>36DC2757-C295-62EA-DFF3-67244285D476</generatorID>
+<ownerDesignName>trabajo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB7BE9E1-FD6A-9DC4-49E6-A9BAC29730AF"/>
+<colUsage columnID="F409CB90-C1D0-58F0-D56B-F8F1B421CAFB"/>
+<colUsage columnID="2EB4FA8F-7211-F7DF-7E2F-234FE182C9F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
