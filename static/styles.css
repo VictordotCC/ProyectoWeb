@@ -110,3 +110,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     padding: 50px;
 }
+
+.contacto {
+    padding-left: 5px;
+}
+
+@media (max-width: 999px) {
+    .font-responsive {
+        font-size: 14px;
+    }
+    
+}

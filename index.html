@@ -34,10 +34,10 @@
                         <a class="nav-link navitem" aria-current="page" href="#seguimiento">Seguimiento</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link navitem" aria-current="page" href="#contacto">Contacto</a>
+                        <a class="nav-link navitem" aria-current="page" href="#nosotros">Nosotros</a>   
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link navitem" aria-current="page" href="#nosotros">Nosotros</a>
+                        <a class="nav-link navitem" aria-current="page" href="#contacto">Contacto</a>
                       </li>
                     </ul>
                     <div class="d-flex">
@@ -106,24 +106,31 @@
         <section id="contacto">
           <!-- Aqui va la seccion de contacto-->
           <div class="container">
+            <div class="row justify content center">
+              <div class="text-center">
+                <h3>Jardiner&iacute;a Huerto+</h3>
+                <p style="color: #95939d">Si tienes alguna sugerencia que contribuya
+                a mejorar nuestros servicios, o simplemente quieres ayudar, no dudes en contactarnos</p>
+              </div>
+            </div>
             <div class="row">
               <div class="col-lg-4 col-md-4">
-                <div>
-                  <h3>Jardiner&iacute;a Huerto+</h3>
-                  <p style="color: #95939d">Si tienes alguna sugerencia que contribuya
-                  a mejorar nuestros servicios, o simplemente quieres ayudar, no dudes en contactarnos</p>
+                <div class="text-center">
+                  <h3>Nuestras Redes Sociales</h3>
                 </div>
-                <div>
-                  <a href="#" class="link"><i class="fa-brands fa-facebook fa-3x"></i></a>
-                  <a href="#" class="link"><i class="fa-brands fa-twitter fa-3x"></i></a>
-                  <a href="#" class="link"><i class="fa-brands fa-instagram fa-3x"></i></a>
-                  <a href="#" class="link"><i class="fa-brands fa-youtube fa-3x"></i></a>
-                  <a href="#" class="link"><i class="fa-brands fa-linkedin fa-3x"></i></a>
-                  <a href="#" class="link"><i class="fa-brands fa-pinterest fa-3x"></i></a>
+                <br>
+                <div class="text-center">
+                  <a href="#" class="link"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-twitter fa-2x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-youtube fa-2x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-pinterest fa-2x"></i></a>
                 </div>          
               </div>
-              <div class="lg-3 col-md-3">
-                <h3>Contacto</h3>
+              <br>
+              <div class="col-lg-3 col-md-3 contacto font-responsive">
+                <h3>Contacto</h3><br>
                 <i class="fa-solid fa-mobile-screen fa-2x" style="padding-left: 3px;"></i>
                 <span style="color: #9d9393; vertical-align: top; margin-left: 5px;">+56 9 87654321</span>
                 <br>
@@ -135,37 +142,39 @@
                 <i class="fa fa-map-marker fa-2x" style="padding-left: 3px;"></i>
                 <span style="color: #95939d; vertical-align: top; margin-left: 5px;">Av. San Martín #913, Providencia</span>
               </div>
-              <div class="lg-5 col-md-5">
-                <div class="form">
-                  <form>
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                          <input type="text" class="form-control" id="nombreContacto" placeholder="Nombre" required>
+              <div class="col-lg-5 col-md-5 contacto">
+                <h3>Formulario de Contacto</h3><br>
+                <div class="justify-content-center">
+                  <div class="form">
+                    <form>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-6 col-md-6">
+                            <input type="text" class="form-control" style="margin-bottom: 15px;" id="nombreContacto" placeholder="Nombre" required>
+                          </div>
+                          <div class="col-lg-6 col-md-6">
+                            <input type="email" class="form-control" id="emailContacto" placeholder="Email" required>
+                          </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                          <input type="email" class="form-control" id="emailContacto" placeholder="Email" required>
+                        <div class="row">
+                          <div class="col-lg-12 col-md-12">
+                            <input type="text" class="form-control" id="asuntoContacto" placeholder="Asunto" required>
+                          </div>
                         </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-lg-12 col-md-12">
+                            <textarea class="form-control" id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12 col-md-12 text-center">
+                            <button type="submit" class="btn btn-success flex-center">Enviar</button>
+                          </div>
+                        </div>               
                       </div>
-                      <br>
-                      <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                          <input type="text" class="form-control" id="asuntoContacto" placeholder="Asunto" required>
-                        </div>
-                      </div>
-                      <br>
-                      <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                          <textarea class="form-control" id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-12 col-md-12 text-center">
-                          <button type="submit" class="btn btn-success flex-center">Enviar</button>
-                        </div>
-                      </div>               
-                    </div>
-                  </form>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
