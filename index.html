@@ -14,14 +14,17 @@
 
     </head>
     <body>
-        <header>
+        <header class="fixed-top d-block-flex">
             <nav class="navbar navbar-dark navbar-expand-lg navbar-light bg-jardin">
                 <div class="container-fluid">
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <a class="navbar-brand" style="color:aliceblue" href="#home">Jardiner&iacute;a Huerto+</a>
-
+                  <a class="btn btn-success d-lg-none" aria-current="false" href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartItems1" class="badge text-bg-success">4</span>
+                  </a>                  
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
@@ -42,38 +45,137 @@
                     </div>
                     <div class="d-flex">
                       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrarse</button>
-                  </div>
-                  </div>
-                  <div class="d-flex">
-                    <a class="btn btn-success" href="#">
+                    </div>
+                    <div class="d-flex d-none d-lg-block">
+                    <a class="btn btn-success" aria-current="false" href="#">
                         <i class="fas fa-shopping-cart"></i>
-                        <span id="cartItems1" class="badge text-bg-success">4</span>
+                        <span id="cartItems2" class="badge text-bg-success">4</span>
                     </a>
-                </div>
+                    </div>
+                  </div>
+
                 </div>
               </nav>
         </header>
         <section id="home">
           <!-- Seccion Bienvenida-->
+          <div class="home-text">
+            <h1>Bienvenido a Jardiner&iacute;a Huerto+</h1>
+            <h4>Somos una comunidad dedicada a la jardinería con compromiso social</h4>
+          </div>
         </section>
+        <section id="carousel">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" style="margin-top: -1px; padding-bottom: 20px;" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/flores.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/garden.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/bricofondo.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </section>
+        
         <section id="productos">
           <!-- Aqui va la seccion de venta de productos-->
         </section>
         <section id="seguimiento">
           <!-- Aqui va la seccion de seguimiento de despacho-->
         </section>
-        <section id="contacto">
-          <!-- Aqui va la seccion de contacto-->
-        </section>
         <section id="nosotros">
           <!-- Aqui va la seccion de nosotros-->
+          <div class="text-center row justify-content-center">
+            <h1>Nosotros</h1>
+            <h3>Somos una comunidad dedicada a la jardinería con compromiso social</h3>
+            <div class="col-lg-5 col-md-5">
+              <br>
+              <h5>"Durante años nos hemos preocupado por implementar una flora variada en nuestro
+                entorno, ayudando a organizaciones sociales a mejorar sus servicios y a promover
+                una mejor calidad de vida."
+              </h5>
+              <br>
+              <p>Desarrolladores: Jairo Álvarez - Víctor Celis</p>
+            </div>
+            
+          </div>
         </section>
-
+        <section id="contacto">
+          <!-- Aqui va la seccion de contacto-->
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4">
+                <div>
+                  <h3>Jardiner&iacute;a Huerto+</h3>
+                  <p style="color: #95939d">Si tienes alguna sugerencia que contribuya
+                  a mejorar nuestros servicios, o simplemente quieres ayudar, no dudes en contactarnos</p>
+                </div>
+                <div>
+                  <a href="#" class="link"><i class="fa-brands fa-facebook fa-3x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-twitter fa-3x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-instagram fa-3x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-youtube fa-3x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                  <a href="#" class="link"><i class="fa-brands fa-pinterest fa-3x"></i></a>
+                </div>          
+              </div>
+              <div class="lg-3 col-md-3">
+                <h3>Contacto</h3>
+                <i class="fa-solid fa-mobile-screen fa-2x" style="padding-left: 3px;"></i>
+                <span style="color: #9d9393; vertical-align: top; margin-left: 5px;">+56 9 87654321</span>
+                <br>
+                <br>
+                <i class="fa fa-envelope fa-2x"></i>
+                <span style="color: #95939d; vertical-align: top; margin-left: 5px;">j.huerto.plus@gmail.com</span>
+                <br>
+                <br>
+                <i class="fa fa-map-marker fa-2x" style="padding-left: 3px;"></i>
+                <span style="color: #95939d; vertical-align: top; margin-left: 5px;">Av. San Martín #913, Providencia</span>
+              </div>
+              <div class="lg-5 col-md-5">
+                <div class="form">
+                  <form>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                          <input type="text" class="form-control" id="nombreContacto" placeholder="Nombre" required>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <input type="email" class="form-control" id="emailContacto" placeholder="Email" required>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                          <input type="text" class="form-control" id="asuntoContacto" placeholder="Asunto" required>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                          <textarea class="form-control" id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 text-center">
+                          <button type="submit" class="btn btn-success flex-center">Enviar</button>
+                        </div>
+                      </div>               
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <footer><!--Agregar cosas-->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="text-center">Jardiner&iacute;a Huerto+</p>
+                        <p class="text-center" style="color: white">Jardiner&iacute;a Huerto+</p>
                     </div>
                 </div>
             </div>
@@ -93,9 +195,9 @@
                 <form>
                   <div class="form-group">
                     <label for="InputEmail">Correo Electr&oacute;nico</label>
-                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo electr&oacute;nico"><br>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo electr&oacute;nico" required><br>
                     <label for="InputPassword">Contrase&ntilde;a</label>
-                    <input type="password" class="form-control" id="InputPassword" placeholder="Ingrese su contraseña">
+                    <input type="password" class="form-control" id="InputPassword" placeholder="Ingrese su contraseña" required>
                   </div>
                 </form>
               </div>
@@ -119,21 +221,20 @@
                 <form>
                   <div class="form-group">
                     <label for="inputNombre">Nombre</label>
-                    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese su nombre"><br>
+                    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese su nombre" required><br>
                     <label for="inputApellido">Apellido</label>
-                    <input type="text" class="form-control" id="inputApellido" placeholder="Ingrese su apellido"><br>
+                    <input type="text" class="form-control" id="inputApellido" placeholder="Ingrese su apellido" required><br>
                     <label for="inputRun">Rut</label>
-                    <input type="text" class="form-control" id="inputRun" placeholder="Ingrese su rut"><br>
+                    <input type="text" class="form-control" id="inputRun" placeholder="Ingrese su rut" required><br>
                     <label for="InputNewEmail">Correo Electr&oacute;nico</label>
-                    <input type="email" class="form-control" id="InputNewEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo electr&oacute;nico"><br>
+                    <input type="email" class="form-control" id="InputNewEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo electr&oacute;nico" required><br>
                     <label for="InputNewPassword">Contrase&ntilde;a</label>
-                    <input type="password" class="form-control" id="InputNewPassword" placeholder="Ingrese su contraseña"><br>
+                    <input type="password" class="form-control" id="InputNewPassword" placeholder="Ingrese su contraseña" required><br>
                     <label for="InputNewPassword2">Confirmar Contrase&ntilde;a</label>
-                    <input type="password" class="form-control" id="InputNewPassword2" placeholder="Confirme su contraseña"><br>
+                    <input type="password" class="form-control" id="InputNewPassword2" placeholder="Confirme su contraseña" required><br>
                     <label for="Suscripción">Suscripción para Donaci&oacute;n a Fundación MiCasa</label>
                     <input type="checkbox" id="Suscripción"><br>
                     <small>Con la donación de $5.000 mensuales, obtendrás un descuento de 5% en todas tus compras.</small>
-
                   </div>
                 </form>
               </div>
