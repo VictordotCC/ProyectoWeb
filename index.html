@@ -9,17 +9,19 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <!--Custom Stylesheet-->
         <link href="static/styles.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/0c3992d49e.js" crossorigin="anonymous"></script>
         <title>Jardiner&iacute;a  Huerto+</title>
 
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-jardin">
+            <nav class="navbar navbar-dark navbar-expand-lg navbar-light bg-jardin">
                 <div class="container-fluid">
-                  <a class="navbar-brand" style="color:aliceblue" href="#">Jardiner&iacute;a Huerto+</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
+                  <a class="navbar-brand" style="color:aliceblue" href="#home">Jardiner&iacute;a Huerto+</a>
+
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
@@ -36,13 +38,113 @@
                       </li>
                     </ul>
                     <div class="d-flex">
-                        <button class="btn btn-success" href="">Iniciar Sesi&oacute;n</button>
-                        <button class="btn btn-success" href="">Registrarse</button>
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesi&oacute;n</button>
                     </div>
+                    <div class="d-flex">
+                      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrarse</button>
                   </div>
+                  </div>
+                  <div class="d-flex">
+                    <a class="btn btn-success" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cartItems1" class="badge text-bg-success">4</span>
+                    </a>
+                </div>
                 </div>
               </nav>
         </header>
+        <section id="home">
+          <!-- Seccion Bienvenida-->
+        </section>
+        <section id="productos">
+          <!-- Aqui va la seccion de venta de productos-->
+        </section>
+        <section id="seguimiento">
+          <!-- Aqui va la seccion de seguimiento de despacho-->
+        </section>
+        <section id="contacto">
+          <!-- Aqui va la seccion de contacto-->
+        </section>
+        <section id="nosotros">
+          <!-- Aqui va la seccion de nosotros-->
+        </section>
+
+        <footer><!--Agregar cosas-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">Jardiner&iacute;a Huerto+</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Ventanas Modales-->
+
+        <!-- Modal Login-->
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-jardin">
+                <h5 class="modal-title" id="modalLoginLabel" style="color: #ffffff">Iniciar Sesi&oacute;n</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="InputEmail">Correo Electr&oacute;nico</label>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo electr&oacute;nico"><br>
+                    <label for="InputPassword">Contrase&ntilde;a</label>
+                    <input type="password" class="form-control" id="InputPassword" placeholder="Ingrese su contraseña">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success">Iniciar Sesi&oacute;n</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Modal Registro-->
+        <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-jardin">
+                <h5 class="modal-title" style="color: #ffffff" id="modalRegistroLabel">Registrarse</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="inputNombre">Nombre</label>
+                    <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese su nombre"><br>
+                    <label for="inputApellido">Apellido</label>
+                    <input type="text" class="form-control" id="inputApellido" placeholder="Ingrese su apellido"><br>
+                    <label for="inputRun">Rut</label>
+                    <input type="text" class="form-control" id="inputRun" placeholder="Ingrese su rut"><br>
+                    <label for="InputNewEmail">Correo Electr&oacute;nico</label>
+                    <input type="email" class="form-control" id="InputNewEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo electr&oacute;nico"><br>
+                    <label for="InputNewPassword">Contrase&ntilde;a</label>
+                    <input type="password" class="form-control" id="InputNewPassword" placeholder="Ingrese su contraseña"><br>
+                    <label for="InputNewPassword2">Confirmar Contrase&ntilde;a</label>
+                    <input type="password" class="form-control" id="InputNewPassword2" placeholder="Confirme su contraseña"><br>
+                    <label for="Suscripción">Suscripción para Donaci&oacute;n a Fundación MiCasa</label>
+                    <input type="checkbox" id="Suscripción"><br>
+                    <small>Con la donación de $5.000 mensuales, obtendrás un descuento de 5% en todas tus compras.</small>
+
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success">Registrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         
         
