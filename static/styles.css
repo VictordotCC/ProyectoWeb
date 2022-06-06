@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     left: 0;
     right: 0;
-    height: calc(50% - 120px);
+    height: calc(50% - 40px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,8 +108,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #nosotros {
-    color: #fff;
+    color: #51f1b7;
     padding: 50px;
+    background-color: rgba(255,255,255,0.3);
 }
 
 .contacto {
@@ -121,4 +122,16 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
     }
     
+}
+
+@media (max-width: 350px){
+    .icon-responsive {
+        font-size: 8px;
+    }
+}
+
+#seguimiento {
+    background-image: linear-gradient(90deg,#1de099, #1dc8cd);
+    color: white;
+    padding: 50px;
 }

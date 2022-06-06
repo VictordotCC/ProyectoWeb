@@ -14,7 +14,7 @@
 
         <script src="https://kit.fontawesome.com/0c3992d49e.js" crossorigin="anonymous"></script>
         <title>Jardiner&iacute;a  Huerto+</title>
-       
+    </head>
     
     <body>
         <header class="fixed-top d-block-flex">
@@ -24,14 +24,14 @@
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <a class="navbar-brand" style="color:aliceblue" href="#home">Jardiner&iacute;a Huerto+</a>
-                  <a class="btn btn-success d-lg-none" aria-current="false" href="#">
+                  <a class="btn btn-success d-lg-none icon-responsive" aria-current="false">
                     <i class="fas fa-shopping-cart"></i>
-                    <span id="cartItems1" class="badge text-bg-success">4</span>
+                    <span id="cartItems1" class="badge text-bg-success"></span>
                   </a>                  
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link navitem activo" aria-current="page" href="#productos">Productos</a>
+                        <a class="nav-link navitem" aria-current="page" href="#productos">Productos</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link navitem" aria-current="page" href="#seguimiento">Seguimiento</a>
@@ -52,7 +52,7 @@
                     <div class="d-flex d-none d-lg-block">
                     <a class="btn btn-success" aria-current="false" href="#">
                         <i class="fas fa-shopping-cart"></i>
-                        <span id="cartItems2" class="badge text-bg-success">4</span>
+                        <span id="cartItems2" class="badge text-bg-success"></span>
                     </a>
                     </div>
                   </div>
@@ -87,47 +87,52 @@
           <!-- Aqui va la seccion de venta de productos-->
           <div class="album py-5 border-top">
             <div class="container">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
+              
+              <!--Primera Fila-->
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-center">
+                <div class="col servicios">
                   <div class="card shadow-sm  bg-success ">
                     <img src="img/flores.jpg" height="225"> <!-- <svg class="bd-placeholder-img card-img-top"   width="100%" height="225" focusable="false"> <title>Placeholder</title><rect width="100%" height="100%"></rect></svg>  -->
                     <div class="card-body">
-                      <p class="card-text text-white" font-color="#ccc">En esta seccion puedes agregar una flor a tu carrito y asi darle una sorpresa a tu Jardin</p>
+                      <p class="card-text text-white" font-color="#ccc">Set de Flores de Jardín, incluye instalación</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Agregar</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Detalles</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar servicios">Agregar</button>
                         </div>
-                        <small class="text-muted">Flores</small>
+                        <span class="text-muted align-bottom">$75.000</span>
                       </div>
                     </div>
                   </div>
                 </div>
     
-                <div class="col">
+                <div class="col herramientas">
                   <div class="card shadow-sm bg-success ">
                     <img src="img/herramientas.jpg" height="225"> <!-- <svg class="bd-placeholder-img card-img-top"   width="100%" height="225" focusable="false"> <title>Placeholder</title><rect width="100%" height="100%"></rect></svg>  -->
                     <div class="card-body">
-                      <p class="card-text text-white" font-color="#ccc">Aqui agrega set de herramientas basicas de jardineria al carrito</p>
+                      <p class="card-text text-white" font-color="#ccc">Set de herramientas básicas de jardinería</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Agregar</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Detalles</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar">Agregar</button>
                         </div>
-                        <small class="text-muted">Herramientas</small>
+                        <span class="text-muted align-bottom">$55.000</span>
                       </div>
                     </div>
                   </div>
                 </div>
     
-                <div class="col">
+                <div class="col otros">
                   <div class="card shadow-sm bg-success ">
                     <img src="img/maseteros.jpg" height="225"> <!-- <svg class="bd-placeholder-img card-img-top"   width="100%" height="225" focusable="false"> <title>Placeholder</title><rect width="100%" height="100%"></rect></svg>  -->
                     <div class="card-body">
-                      <p class="card-text  text-white" font-color="#ccc">Aqui puedes agregar un set de 5 Maceteros de distintos tamaños para tu Jardin</p>
+                      <p class="card-text  text-white" font-color="#ccc">Set de maceteros de distintos tamaños</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Agregar</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Detalles</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar">Agregar</button>
                         </div>
-                        <small class="text-muted">Maceteros</small>
+                        <span class="text-muted align-bottom">$25.000</span>
                       </div>
                     </div>
                   </div>
@@ -213,7 +218,7 @@
                             <input type="email" class="form-control" id="emailContacto" placeholder="Email" required>
                           </div>
                         </div>
-                        <div class="row">
+                        <div class="row" style="padding-top: 15px">
                           <div class="col-lg-12 col-md-12">
                             <input type="text" class="form-control" id="asuntoContacto" placeholder="Asunto" required>
                           </div>
@@ -317,6 +322,9 @@
         
         <!--JS Bootstrap & Popper-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+        <!--Jquery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!--Custom Scripts-->
+        <script src="static/script.js"></script>
       </body>
 </html>
