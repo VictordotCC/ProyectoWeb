@@ -23,7 +23,16 @@ $(document).ready(function() {
     $('.navbar-brand').click(function(event){
             $('.nav-link').removeClass('activo');
     });
-    $('#Filtros').click(function(event){
+    $('#filtros').click(function(event){
+        $('#menuFiltros').children().each(function(index, el) {
+            if ($(el).hasClass('checkbox')) {
+                var x= $(el).children().children().is(':checked');
+                console.log(x);
+            };
+            if ($(el).hasClass('radio')) {
+            console.log($(this).text());
+            };
+        });
         
     });
 });
