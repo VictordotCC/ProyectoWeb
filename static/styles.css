@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel-item {
     width: 80vw;
-    height: 60vh;
+    
 }
 
 .carousel img {
@@ -138,12 +138,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .dropdown-toggle {
     text-align: center;
-    width: 12%;
 }
 
 .dropdown-menu {
     background-color: #1dc8cd;
     color: white;
     padding-left: 1%;
-    width: 12%;
 }

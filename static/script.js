@@ -26,16 +26,12 @@ $(document).ready(function() {
     $('#filtros').click(function(event){
         $('#menuFiltros').children().each(function(index, el) {
             if ($(el).hasClass('checkbox')) {
-                var x= $(el).children().children().is(':checked'); //FIXME
-                if (x) {
-                    console.log(x);
-                };
-            };
-            if ($(el).hasClass('radio')) {
-                var y= $(el).children().children().is(':checked');//FIXME
-                if (y) {
-                    console.log(y);
-                };
+                var isChecked= $(el).children().children().is(':checked'); //FIXME
+                if (!isChecked) {
+                    $('.'+$(el).text()).addClass('d-none');
+                } else {
+                    $('.'+$(el).text()).removeClass('d-none');
+                }
             };
         });
         
