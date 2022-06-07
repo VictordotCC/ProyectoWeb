@@ -101,17 +101,17 @@
 
 
           <div class="album py-5">
-            <div class="container">          
+            <div class="container">         
               <!--Primera Fila-->
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-center">
                 <div class="col Servicios">
                   <div class="card shadow-sm  bg-success ">
-                    <img src="img/flores.jpg" height="225"> <!-- <svg class="bd-placeholder-img card-img-top"   width="100%" height="225" focusable="false"> <title>Placeholder</title><rect width="100%" height="100%"></rect></svg>  -->
+                    <img src="img/plantas.jpg" height="225"> <!-- <svg class="bd-placeholder-img card-img-top"   width="100%" height="225" focusable="false"> <title>Placeholder</title><rect width="100%" height="100%"></rect></svg>  -->
                     <div class="card-body">
                       <p class="card-text text-white" font-color="#ccc">Set de Flores de Jardín, incluye instalación</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Detalles</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white"  data-bs-toggle="modal" data-bs-target="#modalDetalles">Detalles</button>
                           <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar servicios">Agregar</button>
                         </div>
                         <span class="text-muted align-bottom">$75.000</span>
@@ -127,7 +127,7 @@
                       <p class="card-text text-white" font-color="#ccc">Set de herramientas básicas de jardinería</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Detalles</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white" data-bs-toggle="modal" data-bs-target="#modalDetalles1">Detalles</button>
                           <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar">Agregar</button>
                         </div>
                         <span class="text-muted align-bottom">$55.000</span>
@@ -143,7 +143,7 @@
                       <p class="card-text  text-white" font-color="#ccc">Set de maceteros de distintos tamaños</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white">Detalles</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white" data-bs-toggle="modal" data-bs-target="#modalDetalles2">Detalles</button>
                           <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar">Agregar</button>
                         </div>
                         <span class="text-muted align-bottom">$25.000</span>
@@ -161,6 +161,24 @@
 
         <section id="seguimiento">
           <!-- Aqui va la seccion de seguimiento de despacho-->
+          <h3>Aqui podras consultar el Estado de tu Pedido</h3>
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-3 position-relative">
+            <label for="validationTooltip03" style="color:  #55535c" class="form-label">N°Seguimiento</label>
+            <input type="text" class="form-control"  placeholder="Ingrese digitos de 8 a 40 caracteres..." id="validationTooltip03" required>
+
+            <div class="invalid-tooltip">
+              Porfavor Ingrese Numero Valido...
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-success" type="submit">Buscar</button>
+          </div>
+        </form>
+
+
+
+
         </section>
         <section id="nosotros">
           <!-- Aqui va la seccion de nosotros-->
@@ -267,6 +285,128 @@
         </footer>
 
         <!-- Ventanas Modales-->
+
+        <!-- Modal producto: FLORES-->
+        
+        <div class="modal fade modal-fullscreen-sm-down " id="modalDetalles" tabindex="-1" role="dialog" aria-labelledby="modalDetallesLabel" aria-hidden="true">
+          <div class="modal-dialog " role="img">
+            <div class="modal-content">
+              <div class="modal-header bg-jardin">
+                <h5 class="modal-title" id="modalDetalles" style="color: #ffffff;">Detalles</h5>
+              </div>
+              <center>
+                <p style="color: #95939d">Estos son los siguientes tipos de Flores que podras obtener en este Set...</p>
+              <div class="modal-body">
+                <div class="lista" >
+                  <img src="img/orquidias.jpg"  class="rounded-3" alt="Orquidias" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Orquidias</li>
+                      <li class="list-group-item">Cantidad: 10 </li>
+                    </ul>
+
+                    <img src="img/tulipanes.jpg" class="rounded-3" alt="Orquidias" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Tulipanes</li>
+                      <li class="list-group-item">Cantidad: 13 </li>
+                    </ul>
+
+                    <img src="img/violetas.jpg"  class="rounded-3" alt="Orquidias" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Violetas</li>
+                      <li class="list-group-item">Cantidad: 12 </li>
+                    </ul>
+                </div>
+               </center>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- Modal producto: Herramientas-->
+        
+        <div class="modal fade modal-fullscreen-sm-down " id="modalDetalles1" tabindex="-1" role="dialog" aria-labelledby="modalDetalles1Label" aria-hidden="true">
+          <div class="modal-dialog " role="img">
+            <div class="modal-content">
+              <div class="modal-header bg-jardin">
+                <h5 class="modal-title" id="modalDetalles1" style="color: #ffffff;">Detalles</h5>
+              </div>
+              <center>
+                <p style="color: #95939d">Estos son los siguientes productos que lleva el set de Herramientas...</p>
+              <div class="modal-body">
+                <div class="lista" >
+                  <img src="img/tijeras.jpg"  class="rounded-3" alt="tijeras" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Tijeras de podar para jardín GRÜNTEK</li>
+                      <li class="list-group-item">Cantidad: 1 </li>
+                    </ul>
+
+                    <img src="img/palitas.jpg" class="rounded-3" alt="palitas" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Set 4 Herramientas Para Jardinería Truper </li>
+                      <li class="list-group-item">Cantidad: 1</li>
+                    </ul>
+
+                    <img src="img/bolso.jpg"  class="rounded-3" alt="bolso" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Bolsa de tela bellota porta herramientas de jardin</li>
+                      <li class="list-group-item">Cantidad: 1 </li>
+                    </ul>
+                </div>
+               </center>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal producto: Maceteros-->
+        
+        <div class="modal fade modal-fullscreen-sm-down " id="modalDetalles2" tabindex="-1" role="dialog" aria-labelledby="modalDetalles2Label" aria-hidden="true">
+          <div class="modal-dialog " role="img">
+            <div class="modal-content">
+              <div class="modal-header bg-jardin">
+                <h5 class="modal-title" id="modalDetalles2" style="color: #ffffff;">Detalles</h5>
+              </div>
+              <center>
+                <p style="color: #95939d">Estos son los siguientes productos que lleva el set de Maceteros u Otros...</p>
+              <div class="modal-body">
+                <div class="lista" >
+                  <img src="img/Macetero1.jpg"  class="rounded-3" alt="Macetero1" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Macetero rústico de arcilla 40x31 cm terracota</li>
+                      <li class="list-group-item">Cantidad: 2 </li>
+                    </ul>
+
+                    <img src="img/Macetero2.jpeg" class="rounded-3" alt="Macetero2" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Maceteros con fibra de coco </li>
+                      <li class="list-group-item">Cantidad: 2</li>
+                    </ul>
+
+                    <img src="img/macetero3.jpg"  class="rounded-3" alt="macetero3" width="300px">
+                  <ul class="list-group list-group-flush col-8">
+                      <li class="list-group-item">Maceta de flores Baby Groot para decoración del hogar</li>
+                      <li class="list-group-item">Cantidad: 1 </li>
+                    </ul>
+                </div>
+               </center>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
 
         <!-- Modal Login-->
         <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
