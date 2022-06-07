@@ -26,11 +26,16 @@ $(document).ready(function() {
     $('#filtros').click(function(event){
         $('#menuFiltros').children().each(function(index, el) {
             if ($(el).hasClass('checkbox')) {
-                var x= $(el).children().children().is(':checked');
-                console.log(x);
+                var x= $(el).children().children().is(':checked'); //FIXME
+                if (x) {
+                    console.log(x);
+                };
             };
             if ($(el).hasClass('radio')) {
-            console.log($(this).text());
+                var y= $(el).children().children().is(':checked');//FIXME
+                if (y) {
+                    console.log(y);
+                };
             };
         });
         
