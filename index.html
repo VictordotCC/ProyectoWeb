@@ -85,9 +85,28 @@
         
         <section id="productos">
           <!-- Aqui va la seccion de venta de productos-->
-          <div class="album py-5 border-top">
-            <div class="container">
-              
+          <div class="dropdown">
+            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              Filtros
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <h6>Tipo de Producto</h6>
+              <li><label><input type="checkbox" name="checkbox" id="chservicios">Servicios</label></li>
+              <li><label><input type="checkbox" name="checkbox" id="chherramientas">Herramientas</label></li>
+              <li><label><input type="checkbox" name="checkbox" id="chotros">Otros</label></li>
+              <br>
+              <h6>Precio</h6>
+              <li><label><input type="radio" name="radio" id="tramo1">$0 - $10000</label></li>
+              <li><label><input type="radio" name="radio" id="tramo2">$10000 - $20000</label></li>
+              <li><label><input type="radio" name="radio" id="tramo3"> $20000 - $30000</label></li>
+              <li><label><input type="radio" name="radio" id="tramo4">$30000 o +</label></li>
+              <li style="text-align: end;"><button class="btn btn-success" id="Filtros">Aplicar</button></li>       
+            </ul>
+          </div>
+
+
+          <div class="album py-5">
+            <div class="container">          
               <!--Primera Fila-->
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-center">
                 <div class="col servicios">

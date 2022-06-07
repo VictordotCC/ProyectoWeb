@@ -135,3 +135,15 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     padding: 50px;
 }
+
+.dropdown-toggle {
+    text-align: center;
+    width: 10%;
+}
+
+.dropdown-menu {
+    background-color: #1dc8cd;
+    color: white;
+    padding-left: 1%;
+    width: 10%;
+}

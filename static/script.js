@@ -20,4 +20,10 @@ $(document).ready(function() {
             $('.nav-link').removeClass('activo');
             $(this).addClass('activo');   
     });
+    $('.navbar-brand').click(function(event){
+            $('.nav-link').removeClass('activo');
+    });
+    $('#Filtros').click(function(event){
+        
+    });
 });
