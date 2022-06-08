@@ -14,6 +14,7 @@ function addToCartClicked(event) {
     const cardTitle = card1.querySelector('.card-text').textContent;
     const cardPrice = card1.querySelector('.text-muted').textContent;
     addItemToShoppingCart(cardTitle, cardPrice);
+};
 
 //}
 //function addItemToShoppingCart(cardTitle,cardPrice){

@@ -177,9 +177,46 @@
               </div>
             </form>
           </div>
-          <div class="row">
-            <span><i class="fa-solid fa-warehouse fa-2x"></i></span>
-            
+          <br>
+          <div class="row justify-content-between text-center">
+            <span class="col-3 bodega" style="color:rgb(255, 0, 0)"><i class="fa-solid fa-warehouse fa-2x"></i></span><!-- Elminar el estilo : Backend-->
+            <span class="col-3 preparando"><i class="fa-solid fa-truck-ramp-box fa-2x"></i></span> 
+            <span class="col-3 camino"><i class="fa-solid fa-truck fa-2x"></i></span>
+            <span class="col-3 entregado"><i class="fa-solid fa-check fa-2x"></i></span>
+          </div>
+          <br>
+          <div class="row text-center">
+            <span class="col-3 bodega" style="color:rgb(255, 0, 0)">En Bodega</span><!-- Elminar el estilo : Backend-->
+            <span class="col-3 preparando">Preparando Entrega</span> 
+            <span class="col-3 camino">Camino al Domicilio</span>
+            <span class="col-3 entregado">Entregado</span>
+          </div>
+          <br>
+          <div class="row text-center" style="border-color: #ffffff; border-style: solid;">
+            <p>Su pedido se encuentra a la espera en nuestras bodegas</p>
+            <div class="table-responsive">
+              <h3>Pedido N°:</h3>
+              <table class="table table-borderless" style="color: white" id="tabladespacho">
+                <thead>
+                  <tr>
+                    <th scope="col">Servicio</th>
+                    <th scope="col">Entrega en</th>
+                    <th scope="col">Destino</th>
+                    <th scope="col">Última Actualización</th>
+                    <th scope="col">Destinatario</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><!-- eliminar info al implementar backend-->
+                    <td>Express</td>
+                    <td>10/10/2019</td>
+                    <td>Calle falsa 123</td>
+                    <td>10/10/2021 21:03:04</td>
+                    <td>Juan Perez</td>
+                </tbody>
+              </table>
+
+            </div>
           </div>
         </section>
 
@@ -327,16 +364,13 @@
         </div>
 
 
-
-
-
         <!-- Modal producto: Herramientas-->
         
         <div class="modal fade modal-fullscreen-sm-down " id="modalDetalles1" tabindex="-1" role="dialog" aria-labelledby="modalDetalles1Label" aria-hidden="true">
           <div class="modal-dialog " role="img">
             <div class="modal-content">
               <div class="modal-header bg-jardin">
-                <h5 class="modal-title" id="modalDetalles1" style="color: #ffffff;">Detalles</h5>
+                <h5 class="modal-title" style="color: #ffffff;">Detalles</h5>
               </div>
               <div class="row text-center">
                 <p style="color: #95939d">Estos son los siguientes productos que lleva el set de Herramientas...</p>
@@ -374,7 +408,7 @@
           <div class="modal-dialog " role="img">
             <div class="modal-content">
               <div class="modal-header bg-jardin">
-                <h5 class="modal-title" id="modalDetalles2" style="color: #ffffff;">Detalles</h5>
+                <h5 class="modal-title" style="color: #ffffff;">Detalles</h5>
               </div>
               <div class="row text-center">
                 <p style="color: #95939d">Estos son los siguientes productos que lleva el set de Maceteros u Otros...</p>
@@ -478,6 +512,5 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!--Custom Scripts-->
         <script src="static/script.js"></script>
-        <script src="static/carrito.js"></script>
       </body>
 </html>
