@@ -43,7 +43,7 @@ small {
     font-size: 12px;
 }
 
-body {
+.body-principal {
     background-image: url("../img/manos-tierra.jpg");
     background-repeat: no-repeat;
     background-size: cover;
