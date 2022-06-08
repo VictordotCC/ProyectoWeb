@@ -161,25 +161,27 @@
 
         <section id="seguimiento">
           <!-- Aqui va la seccion de seguimiento de despacho-->
-          <h3>Aqui podras consultar el Estado de tu Pedido</h3>
-          <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-3 position-relative">
-            <label for="validationTooltip03" style="color:  #55535c" class="form-label">N°Seguimiento</label>
-            <input type="text" class="form-control"  placeholder="Ingrese digitos de 8 a 40 caracteres..." id="validationTooltip03" required>
-
-            <div class="invalid-tooltip">
-              Porfavor Ingrese Numero Valido...
-            </div>
+          <div class="row text-center justify-content-center align-items-center">
+            <h3>Consulta el Estado de tu Pedido</h3>
+            <form class="g-3 needs-validation" novalidate>
+              <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                  <label for="validationTooltip01">Nº Seguimiento</label>
+                  <input type="text" class="form-control" id="validationTooltip01" placeholder="Número de Pedido" required>
+                  <div class="invalid-tooltip">
+                    Por favor ingrese un número de pedido válido.
+                  </div>
+              <div class="col-12">
+                <button class="btn btn-success" type="submit">Buscar</button>
+              </div>
+            </form>
           </div>
-          <div class="col-12">
-            <button class="btn btn-success" type="submit">Buscar</button>
+          <div class="row">
+            <span><i class="fa-solid fa-warehouse fa-2x"></i></span>
+
           </div>
-        </form>
-
-
-
-
         </section>
+
         <section id="nosotros">
           <!-- Aqui va la seccion de nosotros-->
           <div class="text-center row justify-content-center">
@@ -294,36 +296,35 @@
               <div class="modal-header bg-jardin">
                 <h5 class="modal-title" id="modalDetalles" style="color: #ffffff;">Detalles</h5>
               </div>
-              <center>
+              <div class="row text-center">
                 <p style="color: #95939d">Estos son los siguientes tipos de Flores que podras obtener en este Set...</p>
-              <div class="modal-body">
-                <div class="lista" >
-                  <img src="img/orquidias.jpg"  class="rounded-3" alt="Orquidias" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                <div class="modal-body">
+                  <div class="lista" >
+                    <img src="img/orquidias.jpg"  class="rounded-3" alt="Orquidias" width="300px">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Orquidias</li>
                       <li class="list-group-item">Cantidad: 10 </li>
                     </ul>
-
                     <img src="img/tulipanes.jpg" class="rounded-3" alt="Orquidias" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Tulipanes</li>
                       <li class="list-group-item">Cantidad: 13 </li>
                     </ul>
-
                     <img src="img/violetas.jpg"  class="rounded-3" alt="Orquidias" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Violetas</li>
                       <li class="list-group-item">Cantidad: 12 </li>
                     </ul>
+                  </div>
                 </div>
-               </center>
+              </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
-                
               </div>
             </div>
           </div>
         </div>
+
 
 
 
@@ -336,32 +337,30 @@
               <div class="modal-header bg-jardin">
                 <h5 class="modal-title" id="modalDetalles1" style="color: #ffffff;">Detalles</h5>
               </div>
-              <center>
+              <div class="row text-center">
                 <p style="color: #95939d">Estos son los siguientes productos que lleva el set de Herramientas...</p>
-              <div class="modal-body">
-                <div class="lista" >
-                  <img src="img/tijeras.jpg"  class="rounded-3" alt="tijeras" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                <div class="modal-body">
+                  <div class="lista" >
+                    <img src="img/tijeras.jpg"  class="rounded-3" alt="tijeras" width="300px">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Tijeras de podar para jardín GRÜNTEK</li>
                       <li class="list-group-item">Cantidad: 1 </li>
                     </ul>
-
                     <img src="img/palitas.jpg" class="rounded-3" alt="palitas" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Set 4 Herramientas Para Jardinería Truper </li>
                       <li class="list-group-item">Cantidad: 1</li>
                     </ul>
-
                     <img src="img/bolso.jpg"  class="rounded-3" alt="bolso" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Bolsa de tela bellota porta herramientas de jardin</li>
                       <li class="list-group-item">Cantidad: 1 </li>
                     </ul>
+                  </div>
                 </div>
-               </center>
+              </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
-                
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>  
               </div>
             </div>
           </div>
@@ -376,32 +375,30 @@
               <div class="modal-header bg-jardin">
                 <h5 class="modal-title" id="modalDetalles2" style="color: #ffffff;">Detalles</h5>
               </div>
-              <center>
+              <div class="row text-center">
                 <p style="color: #95939d">Estos son los siguientes productos que lleva el set de Maceteros u Otros...</p>
-              <div class="modal-body">
-                <div class="lista" >
-                  <img src="img/Macetero1.jpg"  class="rounded-3" alt="Macetero1" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                <div class="modal-body">
+                  <div class="lista" >
+                    <img src="img/Macetero1.jpg"  class="rounded-3" alt="Macetero1" width="300px">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Macetero rústico de arcilla 40x31 cm terracota</li>
                       <li class="list-group-item">Cantidad: 2 </li>
                     </ul>
-
                     <img src="img/Macetero2.jpeg" class="rounded-3" alt="Macetero2" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Maceteros con fibra de coco </li>
                       <li class="list-group-item">Cantidad: 2</li>
                     </ul>
-
                     <img src="img/macetero3.jpg"  class="rounded-3" alt="macetero3" width="300px">
-                  <ul class="list-group list-group-flush col-8">
+                    <ul class="list-group list-group-flush col-8">
                       <li class="list-group-item">Maceta de flores Baby Groot para decoración del hogar</li>
                       <li class="list-group-item">Cantidad: 1 </li>
                     </ul>
+                  </div>
                 </div>
-               </center>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
-                
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                </div>
               </div>
             </div>
           </div>
