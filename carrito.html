@@ -22,40 +22,91 @@
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                  <a class="navbar-brand" style="color:aliceblue" href="#home">Jardiner&iacute;a Huerto+</a>
+                  <a class="navbar-brand" style="color:aliceblue" href="index.html">Jardiner&iacute;a Huerto+</a>
                   <a class="btn btn-success d-lg-none icon-responsive" aria-current="false">
                     <i class="fas fa-shopping-cart"></i>
                     <span id="cartItems1" class="badge text-bg-success"></span>
-                  </a>                  
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link navitem" aria-current="page" href="#productos">Productos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link navitem" aria-current="page" href="#seguimiento">Seguimiento</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link navitem" aria-current="page" href="#nosotros">Nosotros</a>   
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link navitem" aria-current="page" href="#contacto">Contacto</a>
-                      </li>
-                    </ul>
-                    <div class="d-flex">
-                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesi&oacute;n</button>
-                    </div>
-                    <div class="d-flex">
-                      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrarse</button>
-                    </div>
-                    <div class="d-flex d-none d-lg-block">
-                    <a class="btn btn-success" aria-current="false" href="#">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span id="cartItems2" class="badge text-bg-success"></span>
-                    </a>
-                    </div>
-                  </div>
-
+                  </a>   
                 </div>
               </nav>
         </header>
+          <main>
+              <div class="container">
+                  <div class="row mt-3">
+                      <div class="col">
+                          <h2 class="d-flex justify-content-center mb-3" style="color: #ffffff">Realizar Compra</h2>
+                          <form id="procesar-pago" action="#" method="post">
+                              <div class="form-group row">
+                                  <label for="cliente" class="col-12 col-md-2 col-form-label h2" style="color: #ffffff">Cliente :</label>
+                                  <div class="col-12 col-md-10">
+                                      <input type="text" class="form-control" id="cliente"
+                                          placeholder="Ingresa nombre cliente" name="destinatario">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label for="email" class="col-12 col-md-2 col-form-label h2" style="color: #ffffff">Correo :</label>
+                                  <div class="col-12 col-md-10">
+                                      <input type="text" class="form-control" id="correo" placeholder="Ingresa tu correo" name="cc_to">
+                                  </div>
+                              </div>
+      
+                              <div id="carrito" class="form-group table-responsive" >
+                                  <table class="table" id="lista-compra" style="color: #ffffff" >
+                                      <thead>
+                                          <tr>
+                                              <th scope="col">Imagen</th>
+                                              <th scope="col">Nombre</th>
+                                              <th scope="col">Precio</th>
+                                              <th scope="col">Cantidad</th>
+                                              <th scope="col">Sub Total</th>
+                                              <th scope="col">Eliminar</th>
+                                          </tr>
+      
+                                      </thead>
+                                      <tbody >
+      
+                                      </tbody>
+                                      <tr>
+                                          <th colspan="4" scope="col" class="text-right" style="color: #ffffff">SUB TOTAL :</th>
+                                          <th scope="col">
+                                              <p id="subtotal"></p>
+                                          </th>
+                                          <!-- <th scope="col"></th> -->
+                                      </tr>
+                                      <tr>
+                                          <th colspan="4" scope="col" class="text-right" style="color: #ffffff">IGV :</th>
+                                          <th scope="col">
+                                              <p id="igv"></p>
+                                          </th>
+                                          <!-- <th scope="col"></th> -->
+                                      </tr>
+                                      <tr>
+                                          <th colspan="4" scope="col" class="text-right" style="color: #ffffff">TOTAL :</th>
+                                          <th scope="col">
+                                              <input id="total" name="monto" class="font-weight-bold border-0" readonly style="color: #ffffff"></input>
+                                          </th>
+                                          <!-- <th scope="col"></th> -->
+                                      </tr>
+      
+                                  </table>
+                              </div>
+                              <div class="row justify-content-between">
+                                  <div class="col-md-4 mb-2">
+                                      <a href="index.html" class="btn btn-info btn-block">Seguir comprando</a>
+                                  </div>
+                                  <div class="col-xs-12 col-md-4">
+                                      <button href="#" class="btn btn-success btn-block" id="procesar-compra" style="color: #ffffff">Realizar compra</button>
+                                  </div>
+                              </div>
+                          </form>
+      
+      
+                      </div>
+                  </div>
+              </div>
+          </main>
+      
+          </div>
+      </body>
+      
+      </html>
