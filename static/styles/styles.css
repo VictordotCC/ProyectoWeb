@@ -44,9 +44,10 @@ small {
 }
 
 .body-principal {
-    background-image: url("../img/manos-tierra.jpg");
+    background-image: url("../../static/manos-tierra.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
