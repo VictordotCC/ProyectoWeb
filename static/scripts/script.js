@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var cart = [];
+    cargarRegiones();
     $('.agregar').click(function(event){
         $(this).html('Agregando...');
         var classes = $(this).attr('class').split(' ');
@@ -36,5 +37,46 @@ $(document).ready(function() {
         });
         
     });
+
+    function cargarRegiones(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "static/scripts/regiones", true);
+        xmlhttp.send();
+        xmlhttp.onloadend = function(){
+            var listado = xmlhttp.responseText;
+            listado = listado.split('\n');
+            listado.slice(1).forEach(function(region){
+                var lista_regiones = region.split('|');
+                $('#InputRegion').append('<option value="'+lista_regiones[0]+'">'+lista_regiones[1]+'</option>');
+            });
+        };
+    }
+
+    $('#InputRegion').change(function(event){
+        var comuna = $(this).val();
+        cargarComunas(comuna);
+    });
+
+    function cargarComunas(region_value) {
+        $('#InputComuna').empty();
+        if (region_value == '') {
+            $('#InputComuna').append('<option value="">Seleccione una comuna</option>');
+        };
+        region_value = region_value;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "static/scripts/comunas", true);
+        xmlhttp.send();
+        xmlhttp.onloadend = function() {
+            var listado = xmlhttp.responseText;
+            listado = listado.split('\n');
+            listado.forEach(function(comuna) {
+                var lista_comunas = comuna.split('|');
+                if (parseInt(lista_comunas[2]) == region_value) {
+                    $('#InputComuna').append('<option value="'+lista_comunas[0]+'">'+lista_comunas[1]+'</option>');
+                };
+            });
+        };
+    };
+    
 });
 

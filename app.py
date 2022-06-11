@@ -34,6 +34,22 @@ def index():
 def carrito():
     return render_template('carrito.html')
 
+@app.route('/registrar', methods=['POST'])
+def registro():
+    data = request.values
+    #FIXME : cambiar al arreglar el formulario
+    #usuario = Usuario(data['nombre'], data['apellido'], data['email'], data['password'])
+    #usuario.save()
+    print(data.get('nombre'))
+    return jsonify({'status': 'ok'})
+
+@app.route('/login', methods=['POST'])
+def login():
+    # TODO: validar que el usuario existe
+    user = request.form['email']
+    password = request.form['password']
+    return jsonify({'user': user, 'password': password})
+
 
 
 # 4. Configurar los puertos nuestra app 

@@ -62,6 +62,7 @@ class Usuario(db.Model):
     correo = db.Column(db.String(250), nullable=False)
     estado = db.Column(db.Boolean, nullable=False)
     comuna_id = db.Column(db.Integer, db.ForeignKey('Comuna.id_comuna'), nullable=False)
+    password = db.Column(db.String(250), nullable=False)
 
     def serialize(self):
         return{
