@@ -34,6 +34,16 @@ def index():
 def carrito():
     return render_template('carrito.html')
 
+@app.route('/administrador')
+def admin():
+    return render_template('administrador.html')
+
+@app.route('/usuario')
+def usuario():
+    return render_template('usuario.html')
+
+
+
 @app.route('/registrar', methods=['POST'])
 def registro():
     data = request.values
@@ -79,13 +89,6 @@ def updateUsuario(id):
     Usuario.save(user)
 
     return jsonify(user.serialize()),200
-
-
-
-
-
-
-
 
 
 

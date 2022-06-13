@@ -35,8 +35,8 @@
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
                 
-                <h3 class="titulo">Victor Celis </h3>
-                <p class="texto">Informatico experimentado y Socio general de Jardinería Huerto+</p>
+                <h3 class="titulo">Jairo Alvarez </h3>
+                <p class="texto">Comprador habitual y Socio de Jardiner&iacute;a  Huerto+</p>
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
@@ -57,75 +57,57 @@
                 <thead>
                     <tr>
                         <th scope="col">Nombre</th>
+                        <th scope="col">Fecha de compra</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Cantidad</th>
                         <th scope="col">Sub Total</th>
-                        <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody id="Orquidias">
                       <td>Orquidias</td>
+                      <td>13/06/2022</td>
                       <td>2000</td>
-                      <td id="counter-label">0</h3><button   id ="sumar"type="button" class="btn btn-outline-light"onclick="agregarCounter()">+</button><button   id ="restar"type="button" class="btn btn-outline-light"onclick="restarCounter()">-</button></td>
+                      <td>1</td>
                       <td>2000</td>
-                      <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
                 </tbody>
-                <tbody id="Tulipanes">
-                    <td>Tulipanes</td>
-                    <td>1500</td>
-                    <td>1</td>
-                    <td>1500</td>
-                    <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
-                </tbody>
-                <tbody id="Violetas">
-                    <td>Violetas</td>
-                    <td>3000</td>
-                    <td>1</td>
-                    <td>3000</td>
-                    <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
-                 </tbody>
                 <tbody id="tijeras">
                     <td>Tijeras de podar para jardín GRÜNTEK</td>
+                    <td>05/05/2022</td>
                     <td>25000</td>
                     <td>1</td>
                     <td>25000</td>
-                    <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
-                </tbody>
-                <tbody id="herramientas">
-                    <td>Set 4 Herramientas Para Jardinería Truper</td>
-                    <td>20000</td>
-                    <td>1</td>
-                    <td>20000</td>
-                    <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
+                    
                 </tbody>
                 <tbody id="Bolsa">
                     <td>Bolsa de tela bellota porta herramientas de jardin</td>
+                    <td>01/01/2021</td>
                     <td>10000</td>
                     <td>1</td>
                     <td>10000</td>
-                    <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
-                </tbody>
-                <tbody id="macetero rustico">
-                    <td>Macetero rústico de arcilla 40x31 cm terracota</td>
-                    <td>10000</td>
-                    <td>1</td>
-                    <td>10000</td>
-                    <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
-                </tbody>
-                <tbody id="macetero fibra">
-                    <td>Maceteros con fibra de coco</td>
-                    <td>15000</td>
-                    <td>1</td>
-                    <td>15000</td>
-                    <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
+                   
                 </tbody>
                 <tbody id="Maceta Groot">
                     <td>Maceta de flores Baby Groot para decoración del hogar</td>
+                    <td>25/05/2022</td>
                     <td>50000</td>
                     <td>1</td>
                     <td>50000</td>
-                    <td style="color: rgb(250, 1, 1)"><i class="fa-solid fa-delete-left ps-4 clickable" id="eliminar"></i></td>
+                    
                 </tbody>
+                <tr>
+                    <th colspan="3" scope="col">IVA</th>
+                    <th scope="col">
+                        <p id="iva" style="font-weight: normal; color: #838080 ;">4750</p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                </tr>
+                <tr>
+                    <th colspan="3" scope="col">TOTAL</th>
+                    <th scope="col">
+                        <input id="total" type="text" name="monto" class="font-weight-bold border-0" readonly style="color: #838080" value="91750">
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                </tr>
             </table>
                 
             <div class="redes-sociales">
