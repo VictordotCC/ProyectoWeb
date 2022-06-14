@@ -1,5 +1,4 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import PrimaryKeyConstraint
 db = SQLAlchemy()
 
 class Region(db.Model):
@@ -51,6 +50,7 @@ class Comuna(db.Model):
 class Usuario(db.Model):
     __tablename__ = 'Usuario'
     id_usuario = db.Column(db.Integer, primary_key=True)
+    tipo = db.Column(db.String(50), nullable=False)
     rut = db.Column(db.Integer, nullable=False)
     dv = db.Column(db.Integer, nullable=True)
     primer_nombre = db.Column(db.String(250), nullable= False)
@@ -63,6 +63,7 @@ class Usuario(db.Model):
     estado = db.Column(db.Boolean, nullable=False)
     comuna_id = db.Column(db.Integer, db.ForeignKey('Comuna.id_comuna'), nullable=False)
     password = db.Column(db.String(250), nullable=False)
+    suscrito = db.Column(db.Boolean, nullable=False)
 
     def serialize(self):
         return{

@@ -72,11 +72,41 @@ $(document).ready(function() {
             listado.forEach(function(comuna) {
                 var lista_comunas = comuna.split('|');
                 if (parseInt(lista_comunas[2]) == region_value) {
-                    $('#InputComuna').append('<option value="'+lista_comunas[0]+'">'+lista_comunas[1]+'</option>');
+                    $('#InputComuna').append('<option value="'+lista_comunas[0]+'" name="'+lista_comunas[1]+'">'+lista_comunas[1]+'</option>');
                 };
             });
         };
     };
+
+    $('#form-registro').submit(function(eventObj){
+        var input_region = $("<input>").attr("type", "hidden").attr("name", "Nombre_region").val($('#InputRegion option:selected').text().slice(0, -1));
+        $('#form-registro').append(input_region);
+        var input_comuna = $("<input>").attr("type", "hidden").attr("name", "Nombre_comuna").val($('#InputComuna option:selected').text());
+        $('#form-registro').append(input_comuna);
+        var inputs = $('#form-registro').find('.is-invalid');
+        if (inputs.length > 0) {
+            return false;
+        };
+      });
+
+    $('#InputNewPassword2').focusout(function(event){
+        var pass = $('#InputNewPassword').val();
+        var pass2 = $('#InputNewPassword2').val();
+        if (pass != pass2) {
+            $('#InputNewPassword2').addClass('is-invalid');
+        } else {
+            $('#InputNewPassword2').removeClass('is-invalid');
+        }
+    });
     
+    $('#InputNewPassword').focusout(function(event){
+        var pass = $('#InputNewPassword').val();
+        var pass2 = $('#InputNewPassword2').val();
+        if (pass != pass2) {
+            $('#InputNewPassword2').addClass('is-invalid');
+        } else {
+            $('#InputNewPassword2').removeClass('is-invalid');
+        }
+    });
 });
 

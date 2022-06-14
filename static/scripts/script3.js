@@ -1,17 +1,26 @@
-//PONE EL CONTADOR A 0
-var sumar = 0;
 
+var sumar;
 //AÑADE UN CLICK AL EJECUTAR LA FUNCIÓN
 function agregarCounter() {
   sumar += 1;
 }
-
-//MUESTRA CUANTOS CLICK LLEVAMOS
-$("#agregarCounter").text(sumar);
+function restarCounter() {
+  if (sumar > 0) {
+    sumar -= 1;
+  }
+}
 
 //AÑADE A TODOS LOS BOTONES CON EL NAME count_click QUE AL SER PULSADOS EJECUTEN EL CONTADOR
 $( document ).ready(function(){
-  $("button[name='sumar']").click(function(){
-     agregarCounter();
+  $("#sumar").click(function(){
+    sumar = parseInt($("#counter-label").val());
+    agregarCounter();
+    $("#counter-label").val(sumar);
+  });
+  
+  $("#restar").click(function(){
+    sumar = parseInt($("#counter-label").val());
+    restarCounter();
+    $("#counter-label").val(sumar);
   });
 });

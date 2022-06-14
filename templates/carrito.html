@@ -16,7 +16,6 @@
         <title>Jardiner&iacute;a  Huerto+</title>
     </head>
     <body style="background-color: white">
-        <h1>carrito</h1>
         <header class="fixed-top d-block-flex">
             <nav class="navbar navbar-dark navbar-expand-lg navbar-light bg-jardin">
                 <div class="container-fluid">
@@ -93,6 +92,83 @@
                   </div>
               </div>
           </main>
+
+          <!-- Modal Login-->
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header bg-jardin">
+                  <h5 class="modal-title" id="modalLoginLabel" style="color: #ffffff">Iniciar Sesi&oacute;n</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form method="post" action="login">
+                    <div class="form-group">
+                      <label for="InputEmail">Correo Electr&oacute;nico</label>
+                      <input type="email" class="form-control" id="InputEmail" name="email" aria-describedby="emailHelp" placeholder="Ingrese su correo electr&oacute;nico" required><br>
+                      <label for="InputPassword">Contrase&ntilde;a</label>
+                      <input type="password" class="form-control" id="InputPassword" name="password" placeholder="Ingrese su contraseña" required>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-success">Iniciar Sesi&oacute;n</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!--Modal Registro-->
+          <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header bg-jardin">
+                  <h5 class="modal-title" style="color: #ffffff" id="modalRegistroLabel">Registrarse</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form method="post" action="registrar">
+                    <div class="form-group">
+                      <label for="inputNombre">Nombre</label>
+                      <input type="text" class="form-control" id="inputNombre" name="nombre" placeholder="Ingrese su nombre" required><br>
+                      <label for="inputApellido">Apellido</label>
+                      <input type="text" class="form-control" id="inputApellido" name="apellido" placeholder="Ingrese su apellido" required><br>
+                      <label for="inputRun">Rut</label>
+                      <input type="text" class="form-control" id="inputRun" name="rut" placeholder="Ingrese su rut" required><br>
+                      <label for="InputNewEmail">Correo Electr&oacute;nico</label>
+                      <input type="email" class="form-control" id="InputNewEmail" aria-describedby="emailHelp" name="email" placeholder="Ingrese su correo electr&oacute;nico" required><br>
+                      <label for="InputDireccion">Direcci&oacute;n</label>
+                      <input type="text" class="form-control" id="InputDireccion" name="direccion" placeholder="Ingrese su direcci&oacute;n" required><br>
+                      <label for="InputRegion">Regi&oacute;n</label>
+                      <select class="form-select" id="InputRegion" name="region" required>
+                        <option value="">Seleccione una Regi&oacute;n</option>
+                      </select><br>
+                      <label for="InputComuna">Comuna</label>
+                      <select class="form-select" id="InputComuna" name="comuna" required>
+                        <option value="">Seleccione una Comuna</option>
+                      </select>
+                        <br>
+                      <label for="InputFono">Tel&eacute;fono</label>
+                      <input type="text" class="form-control" id="InputFono" name="fono" placeholder="Ingrese su tel&eacute;fono" required><br>
+                      <label for="InputNewPassword">Contrase&ntilde;a</label>
+                      <input type="password" class="form-control" id="InputNewPassword" name="password" placeholder="Ingrese su contraseña" required><br>
+                      <label for="InputNewPassword2">Confirmar Contrase&ntilde;a</label>
+                      <input type="password" class="form-control" id="InputNewPassword2" name="password2" placeholder="Confirme su contraseña" required><br>
+                      <label for="Suscripción">Suscripción para Donaci&oacute;n a Fundación MiCasa</label>
+                      <input type="checkbox" id="Suscripción" name="suscripcion"><br>
+                      <small>Con la donación de $5.000 mensuales, obtendrás un descuento de 5% en todas tus compras.</small>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-success">Registrar</button>
+                    </div>
+                  </form>
+                </div>
+  
+              </div>
+            </div>
+          </div>
         <!--JS Bootstrap & Popper-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <!--Jquery-->

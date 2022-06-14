@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    var stat = '{{ status }}' ;
+    //Checkea variables iniciales
+    if (stat == 201) {
+        alert("Se ha registrado correctamente");
+    };
+    if (stat == 501) {
+        alert("El usuario ya existe");
+    };
+    if (stat == 400) {
+        alert("Error en correo o contraseña");
+    };
+
+    //redirect to home
+
+    function redirect() {
+        window.location.href = "/";
+    };
+    redirect();
+</script>

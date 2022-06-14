@@ -43,11 +43,13 @@
                         <a class="nav-link navitem" aria-current="page" href="#contacto">Contacto</a>
                       </li>
                     </ul>
-                    <div class="d-flex">
-                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesi&oacute;n</button>
-                    </div>
-                    <div class="d-flex">
-                      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrarse</button>
+                    <div id= "inicio-sesion" class="d-flex">
+                      <div class="d-flex">
+                          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesi&oacute;n</button>
+                      </div>
+                      <div class="d-flex">
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrarse</button>
+                      </div>
                     </div>
                     <div class="d-flex d-none d-lg-block">
                     <a class="btn btn-success" aria-current="false" href="carrito">
@@ -480,7 +482,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form method="post" action="registrar">
+                <form id="form-registro" method="post" 
+                  oninput='password2.setCustomValidity(password2.value != password.value ? 
+                      "Las contraseñas no coinciden." :"")' 
+                  action="registrar">
                   <div class="form-group">
                     <label for="inputNombre">Nombre</label>
                     <input type="text" class="form-control" id="inputNombre" name="nombre" placeholder="Ingrese su nombre" required><br>
@@ -530,6 +535,17 @@
         <!--Jquery-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!--Custom Scripts-->
+        <script type="text/javascript">
+          $(document).ready(function(){
+            var stat = '{{ status }}';
+            
+            if (stat == 202) {
+              $('#inicio-sesion').children().remove();
+              //modificar aquí
+              $('#inicio-sesion').append('<p>Bienvenido<p>');
+            }
+          });
+        </script>
         <script src="static/scripts/script.js"></script>
       </body>
 </html>
