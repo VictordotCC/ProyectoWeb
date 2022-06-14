@@ -67,7 +67,7 @@ class Usuario(db.Model):
 
     def serialize(self):
         return{
-            "id": self.id,
+            "id": self.id_usuario,
             "rut": self.rut,
             "dv": self.dv,
             "primer_nombre": self.primer_nombre,
@@ -97,15 +97,16 @@ class Producto(db.Model):
     id_producto = db.Column(db.Integer, primary_key=True)
     codigo = db.Column(db.String(250), nullable=False)
     nombre = db.Column(db.String(250), nullable=False)
+    categoria = db.Column(db.String(250), nullable=False)
     valor_venta = db.Column(db.Integer, nullable=False)
     stock = db.Column(db.Integer, nullable=False)
     descripcion = db.Column(db.String(250), nullable=False)
-    imagen= db.Column(db.String(250), nullable=True)
+    imagen= db.Column(db.String(250), nullable=False)
     estado = db.Column(db.Boolean, nullable=False)
 
     def serialize(self):
         return{
-            "id": self.id,
+            "id": self.id_producto,
             "codigo": self.codigo,
             "nombre": self.nombre,
             "valor_venta": self.valor_venta,

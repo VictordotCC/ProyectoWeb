@@ -23,4 +23,32 @@ $( document ).ready(function(){
     restarCounter();
     $("#counter-label").val(sumar);
   });
+
+  $("#Registrar_Producto").click(function(){
+    var nombre = $("#n_producto").val();
+    var descripcion = $("#inputDescripcion").val();
+    var categoria = $("#inputCategoria").val();
+    var precio = $("#inputPrecio").val();
+    var stock = $("#inputStock").val();
+    var imagen = $("#inputImagen").val();
+    var formdata = new FormData($("#formulario")[0]);
+
+    if (nombre == "" || descripcion == "" || categoria == "" || precio == "" || stock == "" || imagen == "") {
+      alert("Todos los campos son obligatorios");
+    }
+    else {
+      $.ajax({
+        url: "/registrar-producto",
+        type: "POST",
+        data: formdata,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function(data) {
+          $("#formulario").trigger("reset");
+          alert("Producto registrado");
+        }
+      });
+    } 
+  });
 });

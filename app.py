@@ -5,11 +5,10 @@
 # 9. comando para migrar mis modelos:   flask db migrate
 # 10. comando para crear nuestros modelos como tablas : flask db upgrade
 # 11. comando para iniciar la app flask: flask run
-
-#from crypt import methods
+from random import randint
 from flask import Flask, redirect, request, jsonify, render_template, url_for
 from flask_migrate import Migrate
-from models import db, Usuario, Comuna, Region
+from models import db, Usuario, Comuna, Region, Producto
 from flask_cors import CORS, cross_origin
 
 # 3. instanciamos la app
@@ -107,19 +106,11 @@ def registro():
 def logout():
     return render_template('index.html', status=200)
 
-@app.route('/administrador')
-def admin():
-    return render_template('administrador.html')
-
-@app.route('/usuario')
-def usuario():
-    return render_template('usuario.html')
-
 @app.route('/registrar', methods=['GET'])
 def reg():
     return redirect(url_for('index'))
 
-@app.route('/perfil/<id>')
+@app.route('/perfil/<id>', methods=['GET'])
 def perfil(id):
     user = Usuario.query.get(id)
     tipo = user.tipo
@@ -127,6 +118,25 @@ def perfil(id):
         return render_template('usuario.html', user=user)
     elif tipo == 'Admin':
         return render_template('administrador.html', user=user)
+
+@app.route('/registrar-producto', methods=['POST'])
+def registrar_producto():
+    file = request.files['v_file']
+    file.save('static/img/' + file.filename) # guarda la imagen en la carpeta static/img
+    data = request.values
+    producto = Producto()
+    producto.nombre = data.get('v_prod')
+    producto.descripcion = data.get('v_desc')
+    producto.categoria = data.get('v_cat')
+    producto.valor_venta = data.get('v_precio')
+    producto.stock = data.get('v_stock')
+    producto.imagen = file.filename # guarda el nombre del archivo en la base de datos
+    #genera el codigo de barras
+    producto.codigo = producto.nombre[0:3] + producto.categoria[0:3] + str(randint(1000,9999))
+    producto.estado = True
+    producto.save()
+
+    return '200'
     
 
 

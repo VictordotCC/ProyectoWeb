@@ -32,23 +32,16 @@
                 <!-- Aqui va la seccion de Usuario-->
                 <div class="perfil-usuario-body container">
                     <div class="row perfil-usuario-bio">
-                        <h3 class="titulo">Victor Celis </h3>
+                        <h3 class="titulo">{{user.primer_nombre}} {{user.apellido_paterno}} </h3>
                         <p class="texto">Informatico experimentado y Socio general de Jardinería Huerto+</p>
                     </div>
-                    <div class="perfil-usuario-footer">
+                    <div class="perfil-usuario-footer justify-content-center">
                         <ul class="lista-datos">
-                            <li><i class="icono fas fa-map-signs"></i> Direccion de usuario:</li>
-                            <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
-                            <li><i class="icono fas fa-briefcase"></i> Trabaja en.</li>
-                            <li><i class="icono fas fa-building"></i> Cargo</li>
+                            <li><i class="icono fas fa-map-signs"></i> Direccion: {{user.direccion}}</li>
+                            <li><i class="icono fas fa-phone-alt"></i> Telefono: {{user.fono}}</li>
+                            <li><i class="icono fas fa-at"></i> Correo: {{user.correo}}</li>
+                            <li><i class="icono fas fa-building"></i> Cargo: {{user.tipo}}</li>
                         </ul>
-                        <ul class="lista-datos">
-                            <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
-                            <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento.</li>
-                            <li><i class="icono fas fa-user-check"></i> Registro.</li>
-                            <li><i class="icono fas fa-share-alt"></i> Redes sociales.</li>
-                        </ul>
-
                     </div>
                 </div>
             </section>
@@ -99,22 +92,31 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form method="post" action="login">
+                  <form id="formulario" enctype="multipart/form-data">
                     <div class="form-group">
                         <div class="mb-3">
-                                <label for="inputN_producto">Nombre del Producto</label>
+                                <label for="n_producto">Nombre del Producto</label>
                                 <input type="text" class="form-control" id="n_producto" name="v_prod" placeholder="Ingrese nombre del Producto" required><br>
+                                <label for="inputDescripcion">Descripcion</label>
+                                <textarea class="form-control" id="inputDescripcion" name="v_desc" rows="3" placeholder="Ingrese descripcion del Producto" required></textarea><br>
+                                <label for="inputCategoria">Categoria</label>
+                                <select class="form-select" id="inputCategoria" name="v_cat" required>
+                                    <option value="">Seleccione una categoria</option>
+                                    <option value="Servicios">Servicios</option>
+                                    <option value="Herramientas">Herramientas</option>
+                                    <option value="Productos">Productos</option>
+                                </select><br>
                                 <label for="inputPrecio">Precio del producto</label>
-                                <input type="text" class="form-control" id="precio" name="v_precio" placeholder="$10000" required><br>
+                                <input type="number" class="form-control" id="inputPrecio" name="v_precio" placeholder="10000" required><br>
                                 <label for="inputStock">Ingrese Stock</label>
-                                <input type="number" class="form-control" id="stock" name="v_stock" placeholder="0" required><br>
+                                <input type="number" class="form-control" id="inputStock" name="v_stock" placeholder="0" required><br>
                                 <label for="formFile" class="form-label">Ingrese imagen del Producto</label>
-                                <input class="form-control" type="file" id="formFile">
+                                <input class="form-control" type="file" name="v_file" id="formFile">
                         </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="submit" class="btn btn-success">Guardar</button>
+                      <button id="Registrar_Producto" type="button" class="btn btn-success">Guardar</button>
                     </div>
                   </form>
                 </div>
@@ -129,6 +131,12 @@
         <!--Jquery-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!--Custom Scripts-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+
+            });
+        </script>
         <script src="{{ url_for('static', filename='scripts/script3.js') }}"></script>
     </body>
 </html>
