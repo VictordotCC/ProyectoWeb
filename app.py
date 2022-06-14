@@ -40,7 +40,8 @@ def login():
     password = request.form['password']
     user = Usuario.query.filter_by(correo=user).first()
     if user is not None and user.password == password:
-        return render_template('index.html', status=202)
+        return render_template('index.html', 
+        status=202, username=user.primer_nombre, userid = user.id_usuario)
     else:
         return render_template('registrado.html', status=400)
 
@@ -102,6 +103,10 @@ def registro():
         return render_template('registrado.html', status=201)
     return render_template('registrado.html', status=501)
 
+@app.route('/logout')
+def logout():
+    return render_template('index.html', status=200)
+
 @app.route('/administrador')
 def admin():
     return render_template('administrador.html')
@@ -113,6 +118,16 @@ def usuario():
 @app.route('/registrar', methods=['GET'])
 def reg():
     return redirect(url_for('index'))
+
+@app.route('/perfil/<id>')
+def perfil(id):
+    user = Usuario.query.get(id)
+    tipo = user.tipo
+    if tipo == 'Cliente':
+        return render_template('usuario.html', user=user)
+    elif tipo == 'Admin':
+        return render_template('administrador.html', user=user)
+    
 
 
 #METODOS DEL PROFESOR

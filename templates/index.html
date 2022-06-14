@@ -52,10 +52,10 @@
                       </div>
                     </div>
                     <div class="d-flex d-none d-lg-block">
-                    <a class="btn btn-success" aria-current="false" href="carrito">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span id="cartItems2" class="badge text-bg-success"></span>
-                    </a>
+                      <a class="btn btn-success" aria-current="false" href="carrito">
+                          <i class="fas fa-shopping-cart"></i>
+                          <span id="cartItems2" class="badge text-bg-success"></span>
+                      </a>
                     </div>
                   </div>
 
@@ -542,7 +542,9 @@
             if (stat == 202) {
               $('#inicio-sesion').children().remove();
               //modificar aquí
-              $('#inicio-sesion').append('<p>Bienvenido<p>');
+              $('#inicio-sesion').append('<div class="d-flex text-center align-items-center pe-3"><h6 style="color: white">Bienvenido, '+'{{ username }}'+'</h3></div>');
+              $('#inicio-sesion').append('<div class="d-flex d-none d-lg-block"><a class="btn btn-success" aria-current="false" href="perfil/{{ userid }}"><i class="fas fa-user-circle"></i></a></div>');
+              $('#inicio-sesion').append('<div class="d-flex d-none d-lg-block"><a class="btn btn-success" aria-current="false" href="/logout" ><i class="fas fa-sign-out-alt"></i></a></div>');
             }
           });
         </script>
