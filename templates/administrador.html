@@ -56,13 +56,6 @@
                 <section>
                     <div class="container">
                         <h2 class="text-center" style="padding-top: 5px;">Productos</h2>
-                        <div class="row">
-                            <div class="text-center col-md-12">
-                                <button class="btn btn-success" type="button" data-toggle="modal" data-target="#modal-agregar-producto">
-                                    Agregar producto
-                                </button>
-                            </div>
-                        </div>
                         <table class="table align-middle" id="lista-compra">
                             <thead>
                                 <tr>
@@ -89,9 +82,46 @@
                     </div>
                     <div class="text-center col-md-12 mb-2">
                         <a href="#" class="btn btn-success">Actualizar Stock</a>
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalRegistroProducto">Registrar Producto</button>
                     </div>
                 </section>
         </main>
+
+        <!--Ventanas Modales-->
+
+        <!--Modal de Registro de Producto-->
+
+        <div class="modal fade" id="modalRegistroProducto" tabindex="-1" role="dialog" aria-labelledby="modalRegistroProductoLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header bg-jardin">
+                  <h5 class="modal-title" id="modalRegistroLabel" style="color: #ffffff">Ingreso del Producto</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form method="post" action="login">
+                    <div class="form-group">
+                        <div class="mb-3">
+                                <label for="inputN_producto">Nombre del Producto</label>
+                                <input type="text" class="form-control" id="n_producto" name="v_prod" placeholder="Ingrese nombre del Producto" required><br>
+                                <label for="inputPrecio">Precio del producto</label>
+                                <input type="text" class="form-control" id="precio" name="v_precio" placeholder="$10000" required><br>
+                                <label for="inputStock">Ingrese Stock</label>
+                                <input type="number" class="form-control" id="stock" name="v_stock" placeholder="0" required><br>
+                                <label for="formFile" class="form-label">Ingrese imagen del Producto</label>
+                                <input class="form-control" type="file" id="formFile">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
 
         <!--JS Bootstrap & Popper-->
