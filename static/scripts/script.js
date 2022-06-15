@@ -80,24 +80,15 @@ $(document).ready(function() {
         };
     };
 
-    $('#form-registro').submit(function(eventObj){
-        var input_region = $("<input>").attr("type", "hidden").attr("name", "Nombre_region").val($('#InputRegion option:selected').text().slice(0, -1));
-        $('#form-registro').append(input_region);
-        var input_comuna = $("<input>").attr("type", "hidden").attr("name", "Nombre_comuna").val($('#InputComuna option:selected').text());
-        $('#form-registro').append(input_comuna);
-        var inputs = $('#form-registro').find('.is-invalid');
-        if (inputs.length > 0) {
-            return false;
-        };
-      });
-
     $('#InputNewPassword2').focusout(function(event){
-        var pass = $('#InputNewPassword').val();
-        var pass2 = $('#InputNewPassword2').val();
-        if (pass != pass2) {
-            $('#InputNewPassword2').addClass('is-invalid');
-        } else {
+        var pass = $('#InputNewPassword');
+        var pass2 = $('#InputNewPassword2');
+        if (pass.val() == pass2.val()) {
             $('#InputNewPassword2').removeClass('is-invalid');
+        } else {
+            $('#InputNewPassword2').addClass('is-invalid');
+            pass2[0].setCustomValidity('Las contraseñas no coinciden');
+            pass2[0].reportValidity();
         }
     });
     
@@ -132,6 +123,101 @@ $(document).ready(function() {
             error: function(obj, status){
                 alert('Usuario o contraseña incorrectos');
             }            
+        });
+    });
+
+    $('#registrar').click(function(event){
+        var nombre = $('#inputNombre').val();
+        if (nombre == '') {
+            $('#inputNombre').addClass('is-invalid');
+            $('#inputNombre')[0].setCustomValidity('El nombre es obligatorio');
+            $('#inputNombre')[0].reportValidity();
+        } else {
+            $('#inputNombre').removeClass('is-invalid');
+        }
+        var apellido = $('#inputApellido').val();
+        if (apellido == '') {
+            $('#inputApellido').addClass('is-invalid');
+            $('#inputApellido')[0].setCustomValidity('El apellido es obligatorio');
+            $('#inputApellido')[0].reportValidity();
+        } else {
+            $('#inputApellido').removeClass('is-invalid');
+        }
+        var rut = $('#inputRun').val();
+        if (rut == '' || rut.split('-').length != 2 || !rut.includes('-')) {
+            $('#inputRun').addClass('is-invalid');
+            $('#inputRun')[0].setCustomValidity('Debe ingresar un rut válido con guión');
+            $('#inputRun')[0].reportValidity();
+        } else {
+            $('#inputRun').removeClass('is-invalid');
+        }
+        var email = $('#InputNewEmail').val();
+        if (email == '' || !email.includes('@') || !email.includes('.') || email.split('@').length != 2) {
+            $('#InputNewEmail').addClass('is-invalid');
+            $('#InputNewEmail')[0].setCustomValidity('El email no es válido');
+            $('#InputNewEmail')[0].reportValidity();
+        } else {
+            $('#InputNewEmail').removeClass('is-invalid');
+        }
+        var direccion = $('#InputDireccion').val();
+        if (direccion == '') {
+            $('#InputDireccion').addClass('is-invalid');
+            $('#InputDireccion')[0].setCustomValidity('La dirección es obligatoria');
+            $('#InputDireccion')[0].reportValidity();
+        } else {
+            $('#InputDireccion').removeClass('is-invalid');
+        }
+        var Nombre_region = ($('#InputRegion option:selected').text().slice(0, -1))
+        var Nombre_comuna = $('#InputComuna option:selected').text();
+        var fono = $('#InputFono').val();
+        if (fono == '') {
+            $('#InputFono').addClass('is-invalid');
+            $('#InputFono')[0].setCustomValidity('El teléfono es obligatorio');
+            $('#InputFono')[0].reportValidity();
+        } else {
+            $('#InputFono').removeClass('is-invalid');
+        }
+        var password = $('#InputNewPassword').val();
+        if (password == '') {
+            $('#InputNewPassword').addClass('is-invalid');
+            $('#InputNewPassword')[0].setCustomValidity('La contraseña es obligatoria');
+            $('#InputNewPassword')[0].reportValidity();
+        } else {
+            $('#InputNewPassword').removeClass('is-invalid');
+        }
+        var password2 = $('#InputNewPassword2').val();
+        if (password2 == '') {
+            $('#InputNewPassword2')[0].setCustomValidity('Las contraseñas no coinciden');
+            $('#InputNewPassword2')[0].reportValidity();
+        }
+        var suscripcion = $('#Suscripcion').is(':checked');
+        var inputs = $('#form-registro').find('.is-invalid');
+        if (inputs.length > 0) {
+            return false;
+        };
+        $.ajax({
+            url: '/registrar',
+            type: 'POST',
+            method: 'POST',
+            data: {
+                nombre: nombre,
+                apellido: apellido,
+                rut: rut,
+                email: email,
+                direccion: direccion,
+                Nombre_region: Nombre_region,
+                Nombre_comuna: Nombre_comuna,
+                fono: fono,
+                password: password,
+                suscripcion: suscripcion
+                },
+            success: function(status){
+                $('#modalRegistro').modal('toggle');
+                alert('Usuario registrado correctamente\nInicie sesión para continuar');
+            },
+            error: function(status){
+                alert('Error al registrar usuario');
+            }
         });
     });
 });

@@ -60,11 +60,12 @@ def registro():
     #sigue
     user.correo = data.get('email')
     user.direccion = data.get('direccion')
-    comuna = data.get('Nombre_comuna')
     region = data.get('Nombre_region')
+    comuna = data.get('Nombre_comuna')   
 
     #tratamiento comuna
     comuna_id = Comuna.query.filter_by(nombre=comuna).first()
+    print(comuna_id is None)
     if comuna_id is None:
         comuna_sql = Comuna()
         comuna_sql.nombre = comuna
@@ -89,7 +90,7 @@ def registro():
     user.estado = True
 
     #Maneja sucripcion
-    if data.get('suscripcion') == 'on':
+    if data.get('suscripcion') == 'true':
         user.suscrito = True
     else:
         user.suscrito = False
@@ -99,8 +100,9 @@ def registro():
     if (Usuario.query.filter_by(rut=user.rut).first() is None
         and Usuario.query.filter_by(correo=user.correo).first() is None):
         user.save()
-        return render_template('registrado.html', status=201)
-    return render_template('registrado.html', status=501)
+        print('Usuario registrado')
+        return '201', 201
+    return '412', 412
 
 @app.route('/logout')
 def logout():

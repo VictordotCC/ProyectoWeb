@@ -292,7 +292,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form method="post" action="login">
+                <form>
                   <div class="form-group">
                     <label for="InputEmail">Correo Electr&oacute;nico</label>
                     <input type="email" class="form-control" id="InputEmail" name="email" aria-describedby="emailHelp" placeholder="Ingrese su correo electr&oacute;nico" required><br>
@@ -318,10 +318,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form id="form-registro" method="post" 
-                  oninput='password2.setCustomValidity(password2.value != password.value ? 
-                      "Las contraseñas no coinciden." :"")' 
-                  action="registrar">
+                <form id = "form-registro">
                   <div class="form-group">
                     <label for="inputNombre">Nombre</label>
                     <input type="text" class="form-control" id="inputNombre" name="nombre" placeholder="Ingrese su nombre" required><br>
@@ -349,12 +346,12 @@
                     <label for="InputNewPassword2">Confirmar Contrase&ntilde;a</label>
                     <input type="password" class="form-control" id="InputNewPassword2" name="password2" placeholder="Confirme su contraseña" required><br>
                     <label for="Suscripción">Suscripción para Donaci&oacute;n a Fundación MiCasa</label>
-                    <input type="checkbox" id="Suscripción" name="suscripcion"><br>
+                    <input type="checkbox" id="Suscripcion" name="suscripcion"><br>
                     <small>Con la donación de $5.000 mensuales, obtendrás un descuento de 5% en todas tus compras.</small>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-success">Registrar</button>
+                    <button type="button" class="btn btn-success" id="registrar">Registrar</button>
                   </div>
                 </form>
               </div>
