@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var cart = [];
     cargarRegiones();
+    cargarProductos();
     $('.agregar').click(function(event){
         $(this).html('Agregando...');
         var classes = $(this).attr('class').split(' ');
@@ -108,5 +109,68 @@ $(document).ready(function() {
             $('#InputNewPassword2').removeClass('is-invalid');
         }
     });
+
+    function cargarProductos(){
+        $.ajax({
+            url: '/productos',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data){
+                var productos = data;
+                productos.forEach(function(producto){
+                    var producto_html = 
+                                        `<div class="col ${producto.categoria}">
+                                            <div class="card shadow-sm bg-success ">
+                                                <img src="static/${producto.imagen}" height="225">
+                                        
+                                                <div class="card-body">
+                                                    <p class="card-text text-white" font-color="#ccc">${producto.nombre}</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white"  data-bs-toggle="modal" data-bs-target="#modalDetalles${producto.id_producto}">Detalles</button>
+                                                            <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar servicios">Agregar</button>
+                                                        </div>
+                                                        <span class="text-muted align-bottom">$${producto.valor_venta.toLocaleString('es-CL')}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>`;
+                    var modal_html =
+                                `<div class="modal fade modal-fullscreen-sm-down " id="modalDetalles${producto.id_producto}" tabindex="-1" role="dialog" aria-labelledby="modalDetallesLabel" aria-hidden="true">
+                                    <div class="modal-dialog " role="img">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-jardin">
+                                                <h5 class="modal-title" id="modalDetalles" style="color: #ffffff;">Detalles</h5>
+                                            </div>
+                                            <div class="row text-center">
+                                                <p style="color: #95939d">${producto.nombre}</p>
+                                                <div class="modal-body">
+                                                    <div class="lista" >
+                                                        <img src="static/${producto.imagen}"  class="rounded-3" alt="${producto.nombre}" width="300px">
+                                                        <ul class="list-group list-group-flush col-12">
+                                                            <li class="list-group-item" style="color: #95939d">Más Información</li>
+                                                            <li class="list-group-item">${producto.descripcion}</li>
+                                                            <li class="list-group-item">$${producto.valor_venta.toLocaleString('es-CL')}</li>
+                                                        </ul>
+                                                        <div class = "d-flex justify-content-between p-2">
+                                                            <p class="list-group-item" style="color: #95939d">Categoría: ${producto.categoria}</p>
+                                                            <p class="list-group-item" style="color: #95939d">Codigo: ${producto.codigo}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+                    $('#contenedor-productos').append(producto_html);
+                    $('body').append(modal_html);
+                    
+                });
+            }
+        });
+    };
 });
 

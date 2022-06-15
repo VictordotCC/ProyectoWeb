@@ -106,9 +106,10 @@ class Producto(db.Model):
 
     def serialize(self):
         return{
-            "id": self.id_producto,
+            "id_producto": self.id_producto,
             "codigo": self.codigo,
             "nombre": self.nombre,
+            "categoria": self.categoria,
             "valor_venta": self.valor_venta,
             "stock": self.stock,
             "descripcion": self.descripcion,

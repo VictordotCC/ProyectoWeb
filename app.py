@@ -137,6 +137,12 @@ def registrar_producto():
     producto.save()
 
     return '200'
+
+@app.route('/productos', methods=['GET'])
+def productos():
+    productos = Producto.query.all()
+    productos = list(map(lambda x: x.serialize(), productos))
+    return jsonify(productos), 200
     
 
 
