@@ -35,14 +35,14 @@ def carrito():
 
 @app.route('/login', methods=['POST'])
 def login():
-    user = request.form['email']
-    password = request.form['password']
+    data = request.values
+    user = data.get('email')
+    password = data.get('pass')
     user = Usuario.query.filter_by(correo=user).first()
     if user is not None and user.password == password:
-        return render_template('index.html', 
-        status=202, username=user.primer_nombre, userid = user.id_usuario)
+        return jsonify(user.serialize()), 200
     else:
-        return render_template('registrado.html', status=400)
+        return '403', 403
 
 @app.route('/registrar', methods=['POST'])
 def registro():
@@ -104,7 +104,7 @@ def registro():
 
 @app.route('/logout')
 def logout():
-    return render_template('index.html', status=200)
+    return render_template('index.html')
 
 @app.route('/registrar', methods=['GET'])
 def reg():

@@ -277,11 +277,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
-
-
-
-        
+        </footer>        
     
 
         <!-- Ventanas Modales-->
@@ -305,7 +301,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-success">Iniciar Sesi&oacute;n</button>
+                    <button id="loguear" type="button" class="btn btn-success">Iniciar Sesi&oacute;n</button>
                   </div>
                 </form>
               </div>
@@ -375,19 +371,6 @@
         <!--Jquery-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!--Custom Scripts-->
-        <script type="text/javascript">
-          $(document).ready(function(){
-            var stat = '{{ status }}';
-            
-            if (stat == 202) {
-              $('#inicio-sesion').children().remove();
-              //modificar aquí
-              $('#inicio-sesion').append('<div class="d-flex text-center align-items-center pe-3"><h6 style="color: white">Bienvenido, '+'{{ username }}'+'</h3></div>');
-              $('#inicio-sesion').append('<div class="d-flex d-none d-lg-block"><a class="btn btn-success" aria-current="false" href="perfil/{{ userid }}"><i class="fas fa-user-circle"></i></a></div>');
-              $('#inicio-sesion').append('<div class="d-flex d-none d-lg-block"><a class="btn btn-success" aria-current="false" href="/logout" ><i class="fas fa-sign-out-alt"></i></a></div>');
-            }
-          });
-        </script>
         <script src="static/scripts/script.js"></script>
       </body>
 </html>
