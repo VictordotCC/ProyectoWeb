@@ -5,6 +5,6 @@ $(document).ready(function() {
         });
     });*/
     cart2 = cart.replaceAll("'",'"');
-    prods = JSON.parse(cart2);
-    console.log(prods);
+    productos = JSON.parse(cart2);
+    //for each y cargar los productos en la pagina
 });
