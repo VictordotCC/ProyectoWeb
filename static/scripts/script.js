@@ -212,11 +212,12 @@ function cargarProductos(){
         dataType: 'json',
         success: function(data){
             var productos = data;
+            console.log(typeof(productos));
             productos.forEach(function(producto){
                 var producto_html = 
                                     `<div class="col ${producto.categoria}">
                                         <div class="card shadow-sm bg-success ">
-                                            <img src="static/${producto.imagen}" height="225">
+                                            <img src="static/img/${producto.imagen}" height="225">
                                     
                                             <div class="card-body">
                                                 <p class="card-text text-white" font-color="#ccc">${producto.nombre}</p>
@@ -241,7 +242,7 @@ function cargarProductos(){
                                             <p style="color: #95939d">${producto.nombre}</p>
                                             <div class="modal-body">
                                                 <div class="lista" >
-                                                    <img src="static/${producto.imagen}"  class="rounded-3" alt="${producto.nombre}" width="300px">
+                                                    <img src="static/img/${producto.imagen}"  class="rounded-3" alt="${producto.nombre}" width="300px">
                                                     <ul class="list-group list-group-flush col-12">
                                                         <li class="list-group-item" style="color: #95939d">Más Información</li>
                                                         <li class="list-group-item">${producto.descripcion}</li>

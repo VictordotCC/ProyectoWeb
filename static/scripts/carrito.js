@@ -4,9 +4,7 @@ $(document).ready(function() {
     $('.agregar').click(function(event){
         $(this).html('Agregando...');
         var classes = $(this).attr('class').split(' ');
-        console.log(classes);
         cart.push(classes.slice(-1)[0]);
-        console.log(cart);
         if (cart.length < 10) {
             $('#cartItems1').html(cart.length);
             $('#cartItems2').html(cart.length);
@@ -17,5 +15,11 @@ $(document).ready(function() {
         window.setTimeout(function(){
             $('.agregar').html('Agregar');
         }, 1000);
+    });
+
+    $('.carrito').submit(function(event){
+        
+        $(this).append('<input type="hidden" name="carrito" value="' + cart + '">');
+        return true;
     });
 });

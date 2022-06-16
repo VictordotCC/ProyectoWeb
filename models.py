@@ -114,7 +114,7 @@ class Producto(db.Model):
             "stock": self.stock,
             "descripcion": self.descripcion,
             "imagen": self.imagen,
-            "estado": self.estado
+            "estado": str(self.estado)
         }
 
     def save(self):

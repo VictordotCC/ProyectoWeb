@@ -29,9 +29,19 @@ Migrate(app, db)
 def index():
     return render_template('index.html', status=200)
 
-@app.route('/carrito')
+@app.route('/carrito', methods=['GET', 'POST'])
 def carrito():
-    return render_template('carrito.html')
+    data = request.values
+    cart = data.get('carrito').split(',')
+    cart_list = []
+    for item in cart:
+        producto = Producto.query.filter_by(codigo=item).first()
+        cart_list.append(producto)
+    try:
+        cart_mapped = list(map(lambda x: x.serialize(), cart_list))
+    except:
+        cart_mapped = []
+    return render_template('carrito.html', cart=cart_mapped, status=200)
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -144,6 +154,7 @@ def productos():
     productos = Producto.query.all()
     productos = list(map(lambda x: x.serialize(), productos))
     return jsonify(productos), 200
+
     
 
 
