@@ -1,21 +1,21 @@
-const addToShoppingCarButtons = document.querySelectorAll('.agregar')
-addToShoppingCarButtons.forEach(addToCartButton => {
-    addToCartButton.addEventListener('click', addToCartClicked);
-});
-
-const shoppingCartCardContainer = document.querySelector('.shoppingCartCardContainer');
-
-function addToCartClicked(event) {
-      const button = event.target;
-    const   card1 =  button.closest('.card');
+$(document).ready(function() {
+    var cart = []; //carrito con los codigos de los productos
     
-
-
-    const cardTitle = card1.querySelector('.card-text').textContent;
-    const cardPrice = card1.querySelector('.text-muted').textContent;
-    addItemToShoppingCart(cardTitle, cardPrice);
-};
-
-//}
-//function addItemToShoppingCart(cardTitle,cardPrice){
-//}
+    $('.agregar').click(function(event){
+        $(this).html('Agregando...');
+        var classes = $(this).attr('class').split(' ');
+        console.log(classes);
+        cart.push(classes.slice(-1)[0]);
+        console.log(cart);
+        if (cart.length < 10) {
+            $('#cartItems1').html(cart.length);
+            $('#cartItems2').html(cart.length);
+        } else {
+            $('#cartItems1').html('+');
+            $('#cartItems2').html('+');
+        };
+        window.setTimeout(function(){
+            $('.agregar').html('Agregar');
+        }, 1000);
+    });
+});

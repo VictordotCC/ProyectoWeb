@@ -1,24 +1,7 @@
 cargarProductos();
 
-$(document).ready(function() {    
-    var cart = [];
+$(document).ready(function() {
     cargarRegiones();
-    $('.agregar').click(function(event){
-        $(this).html('Agregando...');
-        var classes = $(this).attr('class').split(' ');
-        cart.push(classes.slice(-1)[0]);
-        if (cart.length < 10) {
-            $('#cartItems1').html(cart.length);
-            $('#cartItems2').html(cart.length);
-        } else {
-            $('#cartItems1').html('+');
-            $('#cartItems2').html('+');
-        };
-        window.setTimeout(function(){
-            $('.agregar').html('Agregar');
-        }, 1000);
-    });
-
     $('.nav-link').click(function(event){
             $('.nav-link').removeClass('activo');
             $(this).addClass('activo');   
@@ -240,7 +223,7 @@ function cargarProductos(){
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <div class="btn-group">
                                                         <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white"  data-bs-toggle="modal" data-bs-target="#modalDetalles${producto.id_producto}">Detalles</button>
-                                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar ${producto.categoria}">Agregar</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-close-white agregar ${producto.categoria} ${producto.codigo}">Agregar</button>
                                                     </div>
                                                     <span class="text-muted align-bottom">$${producto.valor_venta.toLocaleString('es-CL')}</span>
                                                 </div>

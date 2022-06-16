@@ -100,7 +100,6 @@ def registro():
     if (Usuario.query.filter_by(rut=user.rut).first() is None
         and Usuario.query.filter_by(correo=user.correo).first() is None):
         user.save()
-        print('Usuario registrado')
         return '201', 201
     return '412', 412
 
