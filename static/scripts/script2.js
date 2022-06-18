@@ -6,5 +6,6 @@ $(document).ready(function() {
     });*/
     cart2 = cart.replaceAll("'",'"');
     productos = JSON.parse(cart2);
+    console.log(productos);
     //for each y cargar los productos en la pagina
 });
